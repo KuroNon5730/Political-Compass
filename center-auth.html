@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Center-Auth | Technocracy & Efficiency</title>
+    <style>
+      :root { --page-color: #8e44ad; } /* Purple Theme */
+      .category-title { 
+        background: #151515; 
+        padding: 10px 20px; 
+        border-left: 5px solid var(--page-color);
+        margin: 40px 0 20px 0;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+      .fact-card:hover { border-left-color: var(--page-color); }
+      .hero h1 { color: var(--page-color); border-bottom: 2px solid var(--page-color); display: inline-block; }
+    </style>
+  </head>
+  <body>
+    <!-- 
+Universal Navigation System for the 15-Page Ideology Database.
+Includes: 
+1. Sticky Top Bar with Dropdowns
+2. The "Horizon Points" (Extremes) Quick-Access
+3. Responsive Mobile Menu
+-->
+
+    <style>
+      :root {
+        --nav-bg: #0a0a0a;
+        --nav-border: #222;
+        --accent: #f1c40f;
+        /* Quadrant Colors */
+        --al: #e74c3c; --ca: #8e44ad; --ar: #3498db;
+        --sm: #d35400; --ce: #7f8c8d; --cm: #2c3e50;
+        --ll: #2ecc71; --cl: #e67e22; --lr: #f1c40f;
+      }
+
+      nav.main-nav {
+        background: var(--nav-bg);
+        border-bottom: 1px solid var(--nav-border);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 0 20px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-brand a {
+        font-weight: 900;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+      }
+
+      .nav-brand span { color: var(--accent); }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .nav-item {
+        position: relative;
+        list-style: none;
+      }
+
+      .nav-link {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+
+      .nav-link:hover { color: #fff; }
+
+      /* Dropdown Menus */
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 8px;
+        width: 220px;
+        padding: 10px 0;
+        display: none;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      }
+
+      .nav-item:hover .dropdown {
+        display: block;
+      }
+
+      .dropdown a {
+        display: block;
+        padding: 10px 20px;
+        color: #888;
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: 0.2s;
+      }
+
+      .dropdown a:hover {
+        background: #1a1a1a;
+        color: #fff;
+      }
+
+      /* Specialized Matrix Indicator */
+      .matrix-btn {
+        background: var(--accent);
+        color: #000 !important;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+
+      /* Mobile Toggle (Simplified for this snippet) */
+      .mobile-hint { display: none; }
+      @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .mobile-hint { display: block; color: var(--accent); font-size: 0.8rem; }
+      }
+    </style>
+
+    <nav class="main-nav">
+      <div class="nav-brand">
+        <a href="index.html">POLITI<span>CORE</span></a>
+      </div>
+
+      <div class="mobile-hint">Menu ☰</div>
+
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Matrix Home</a>
+        </li>
+
+        <!-- Core 9 Zones -->
+        <li class="nav-item">
+          <span class="nav-link">Core Zones ▾</span>
+          <div class="dropdown">
+            <a href="authoritarian.html">Auth-Left</a>
+            <a href="center-auth.html">Center-Auth</a>
+            <a href="auth-right.html">Auth-Right</a>
+            <hr style="border:0; border-top:1px solid #222;">
+            <a href="socialist-market.html">Socialist Market</a>
+            <a href="centrism.html">Centrism</a>
+            <a href="corporate-market.html">Corporate Market</a>
+            <hr style="border:0; border-top:1px solid #222;">
+            <a href="libertarian.html">Lib-Left</a>
+            <a href="center-lib.html">Center-Lib</a>
+            <a href="lib-right.html">Lib-Right</a>
+          </div>
+        </li>
+
+        <!-- The 6 Extremes -->
+        <li class="nav-item">
+          <span class="nav-link" style="color: #ff4757;">Horizon Points ▾</span>
+          <div class="dropdown">
+            <a href="extreme-al.html" style="color: #ff4757;">Marxism-Leninism (AL)</a>
+            <a href="extreme-ca.html" style="color: #a29bfe;">Technocracy (CA)</a>
+            <a href="extreme-ar.html" style="color: #74b9ff;">Reactionary Abs. (AR)</a>
+            <a href="extreme-ll.html" style="color: #55efc4;">Anarcho-Comm. (LL)</a>
+            <a href="extreme-cl.html" style="color: #fab1a0;">Radical Individualism (CL)</a>
+            <a href="extreme-lr.html" style="color: #ffeaa7;">Anarcho-Cap. (LR)</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="comparison.html" class="nav-link">Master Table</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="challenge.html" class="nav-link matrix-btn">The Challenge</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 
+Breadcrumb / Progress Tracker 
+(Useful for deep research through 750 facts)
+-->
+    <div style="background: #111; padding: 5px 20px; border-bottom: 1px solid #222; font-size: 0.75rem; color: #555;">
+      Database Status: <span style="color:#2ecc71">15/15 Pages Online</span> | 
+      Data Load: <span style="color:#f1c40f">750/750 Verified Facts</span>
+    </div>
+
+    <div class="container">
+      <header class="hero">
+        <h1>Center-Authoritarian</h1>
+        <p><strong>The Model of Technical Order:</strong> Expert-Led Governance, Data-Driven Policy, and Social Engineering.</p>
+      </header>
+
+
+
+      <h2 class="category-title">I. Rule by Expertise</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">01</span><p>Replaces elected politicians with a committee of scientists, engineers, and technical experts.</p></div>
+        <div class="fact-card"><span class="fact-number">02</span><p>Legislative decisions are strictly based on empirical data and predictive scientific modeling.</p></div>
+        <div class="fact-card"><span class="fact-number">03</span><p>Applies the scientific method to social issues to identify the most efficient solutions.</p></div>
+        <div class="fact-card"><span class="fact-number">04</span><p>Historically proposed "Energy Accounting" to replace currency with certificates of work.</p></div>
+        <div class="fact-card"><span class="fact-number">05</span><p>Views society as a complex machine requiring professional, non-partisan management.</p></div>
+        <div class="fact-card"><span class="fact-number">06</span><p>Considers economic or social "waste" as the ultimate moral and systemic failing.</p></div>
+        <div class="fact-card"><span class="fact-number">07</span><p>Aims for a "Post-Political" era where data renders ideological debate obsolete.</p></div>
+        <div class="fact-card"><span class="fact-number">08</span><p>Exerts total state control over power, water, and transport for maximum stability.</p></div>
+        <div class="fact-card"><span class="fact-number">09</span><p>Standardizes all social and economic interactions to ensure they are measurable.</p></div>
+        <div class="fact-card"><span class="fact-number">10</span><p>Awards leadership based on IQ, education, and objective technical competence.</p></div>
+      </div>
+
+      <h2 class="category-title">II. Social Engineering & Public Health</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">11</span><p>Uses state power proactively to shape the health, habits, and education of citizens.</p></div>
+        <div class="fact-card"><span class="fact-number">12</span><p>Classifies individual health as state security, justifying mandatory medical mandates.</p></div>
+        <div class="fact-card"><span class="fact-number">13</span><p>Employs "Nudge Theory" to steer the public toward state-approved behaviors.</p></div>
+        <div class="fact-card"><span class="fact-number">14</span><p>Manages national demographics and birth rates to ensure long-term stability.</p></div>
+        <div class="fact-card"><span class="fact-number">15</span><p>Restricts access to media or substances deemed harmful to collective mental health.</p></div>
+        <div class="fact-card"><span class="fact-number">16</span><p>Designs urban environments to maximize transit speed and social cohesion.</p></div>
+        <div class="fact-card"><span class="fact-number">17</span><p>Enforces a uniform national curriculum focused on high-demand technical skills.</p></div>
+        <div class="fact-card"><span class="fact-number">18</span><p>State-enforced conservation is based on resource-load data, not market demand.</p></div>
+        <div class="fact-card"><span class="fact-number">19</span><p>Allocates the workforce into careers based on rigorous aptitude testing.</p></div>
+        <div class="fact-card"><span class="fact-number">20</span><p>Maintains a mandatory digital database of every citizen's health and legal status.</p></div>
+      </div>
+
+      <h2 class="category-title">III. Algorithmic Justice & Security</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">21</span><p>Utilizes predictive algorithms to identify and stop potential crimes before they occur.</p></div>
+        <div class="fact-card"><span class="fact-number">22</span><p>Subjects criminals to mandatory psychological correction and rehabilitation.</p></div>
+        <div class="fact-card"><span class="fact-number">23</span><p>Monitors all public spaces to optimize social behavior and infrastructure use.</p></div>
+        <div class="fact-card"><span class="fact-number">24</span><p>Uses specialized administrative agencies rather than courts for social disputes.</p></div>
+        <div class="fact-card"><span class="fact-number">25</span><p>Strives for "Algorithmic Justice" to remove human bias from the legal system.</p></div>
+        <div class="fact-card"><span class="fact-number">26</span><p>Compulsory biometric identification is required to access any state service.</p></div>
+        <div class="fact-card"><span class="fact-number">27</span><p>Real-time cybernetic monitoring allows for immediate state adjustments to policy.</p></div>
+        <div class="fact-card"><span class="fact-number">28</span><p>Filters the information landscape to prevent the spread of destabilizing ideas.</p></div>
+        <div class="fact-card"><span class="fact-number">29</span><p>Keeps the nation in a permanent state of mobilization for any natural or social crisis.</p></div>
+        <div class="fact-card"><span class="fact-number">30</span><p>Rights are viewed as permissions granted by the state for the sake of utility.</p></div>
+      </div>
+
+      <h2 class="category-title">IV. Resource Directivism</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">31</span><p>Private industry must follow strict state-issued "Productive Directives."</p></div>
+        <div class="fact-card"><span class="fact-number">32</span><p>The state maintains total ownership of energy, telecom, and heavy industry.</p></div>
+        <div class="fact-card"><span class="fact-number">33</span><p>Controls the allocation of raw materials to ensure they are used "rationally."</p></div>
+        <div class="fact-card"><span class="fact-number">34</span><p>Actively discourages the production of non-essential luxury consumer goods.</p></div>
+        <div class="fact-card"><span class="fact-number">35</span><p>Fixes prices based on thermodynamic production costs and social requirements.</p></div>
+        <div class="fact-card"><span class="fact-number">36</span><p>Aggressively funds fusion, AI, and automation to achieve a post-scarcity economy.</p></div>
+        <div class="fact-card"><span class="fact-number">37</span><p>Prioritizes replacing human labor with machines to eliminate systemic error.</p></div>
+        <div class="fact-card"><span class="fact-number">38</span><p>Directs the vast majority of scientific R&D to meet specific state goals.</p></div>
+        <div class="fact-card"><span class="fact-number">39</span><p>Reserves the right to draft technical experts into critical industries.</p></div>
+        <div class="fact-card"><span class="fact-number">40</span><p>Advocates for a global expert-led authority to solve international crises.</p></div>
+      </div>
+
+      <h2 class="category-title">V. The Managerial Mindset</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">41</span><p>Operates on the principle of "The greatest good for the greatest number."</p></div>
+        <div class="fact-card"><span class="fact-number">42</span><p>Views society as an organism that must be kept in a state of homeostasis.</p></div>
+        <div class="fact-card"><span class="fact-number">43</span><p>Rejects democracy as an unscientific method prone to emotional manipulation.</p></div>
+        <div class="fact-card"><span class="fact-number">44</span><p>Follows Positivism: only mathematical and sensory proof constitutes truth.</p></div>
+        <div class="fact-card"><span class="fact-number">45</span><p>The individual is seen as a functional unit within the larger state system.</p></div>
+        <div class="fact-card"><span class="fact-number">46</span><p>Prioritizes secular scientific progress over all religious or cultural traditions.</p></div>
+        <div class="fact-card"><span class="fact-number">47</span><p>Defines history as the progression of human technological and state efficiency.</p></div>
+        <div class="fact-card"><span class="fact-number">48</span><p>Focuses on "whatever works" to maintain systemic order and growth.</p></div>
+        <div class="fact-card"><span class="fact-number">49</span><p>Assumes that data-driven committees are logically superior to individuals.</p></div>
+        <div class="fact-card"><span class="fact-number">50</span><p>Aims for a perfectly administered society where social conflict is obsolete.</p></div>
+      </div>
+    </div>
+
+    <footer style="text-align: center; padding: 20px; color: #666;">
+      <p>Political Science Database | Bibliography Source: Howard Scott & Auguste Comte</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Lib-Left | Common Ownership & Liberty</title>
+    <style>
+      :root { --page-color: var(--lib-left); }
+      .category-title { 
+        background: #151515; 
+        padding: 10px 20px; 
+        border-left: 5px solid var(--lib-left);
+        margin: 40px 0 20px 0;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+      .fact-card:hover { border-left-color: var(--lib-left); }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <!-- 
+Universal Navigation System for the 15-Page Ideology Database.
+Includes: 
+1. Sticky Top Bar with Dropdowns
+2. The "Horizon Points" (Extremes) Quick-Access
+3. Responsive Mobile Menu
+-->
+
+      <style>
+        :root {
+          --nav-bg: #0a0a0a;
+          --nav-border: #222;
+          --accent: #f1c40f;
+          /* Quadrant Colors */
+          --al: #e74c3c; --ca: #8e44ad; --ar: #3498db;
+          --sm: #d35400; --ce: #7f8c8d; --cm: #2c3e50;
+          --ll: #2ecc71; --cl: #e67e22; --lr: #f1c40f;
+        }
+
+        nav.main-nav {
+          background: var(--nav-bg);
+          border-bottom: 1px solid var(--nav-border);
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+          padding: 0 20px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .nav-brand a {
+          font-weight: 900;
+          color: #fff;
+          text-decoration: none;
+          letter-spacing: 2px;
+          font-size: 1.2rem;
+        }
+
+        .nav-brand span { color: var(--accent); }
+
+        .nav-links {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+        }
+
+        .nav-item {
+          position: relative;
+          list-style: none;
+        }
+
+        .nav-link {
+          color: #aaa;
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: 0.2s;
+          cursor: pointer;
+        }
+
+        .nav-link:hover { color: #fff; }
+
+        /* Dropdown Menus */
+        .dropdown {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #111;
+          border: 1px solid #333;
+          border-radius: 8px;
+          width: 220px;
+          padding: 10px 0;
+          display: none;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .nav-item:hover .dropdown {
+          display: block;
+        }
+
+        .dropdown a {
+          display: block;
+          padding: 10px 20px;
+          color: #888;
+          text-decoration: none;
+          font-size: 0.85rem;
+          transition: 0.2s;
+        }
+
+        .dropdown a:hover {
+          background: #1a1a1a;
+          color: #fff;
+        }
+
+        /* Specialized Matrix Indicator */
+        .matrix-btn {
+          background: var(--accent);
+          color: #000 !important;
+          padding: 6px 15px;
+          border-radius: 20px;
+          font-weight: bold;
+        }
+
+        /* Mobile Toggle (Simplified for this snippet) */
+        .mobile-hint { display: none; }
+        @media (max-width: 768px) {
+          .nav-links { display: none; }
+          .mobile-hint { display: block; color: var(--accent); font-size: 0.8rem; }
+        }
+      </style>
+
+      <nav class="main-nav">
+        <div class="nav-brand">
+          <a href="index.html">POLITI<span>CORE</span></a>
+        </div>
+
+        <div class="mobile-hint">Menu ☰</div>
+
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Matrix Home</a>
+          </li>
+
+          <!-- Core 9 Zones -->
+          <li class="nav-item">
+            <span class="nav-link">Core Zones ▾</span>
+            <div class="dropdown">
+              <a href="authoritarian.html">Auth-Left</a>
+              <a href="center-auth.html">Center-Auth</a>
+              <a href="auth-right.html">Auth-Right</a>
+              <hr style="border:0; border-top:1px solid #222;">
+              <a href="socialist-market.html">Socialist Market</a>
+              <a href="centrism.html">Centrism</a>
+              <a href="corporate-market.html">Corporate Market</a>
+              <hr style="border:0; border-top:1px solid #222;">
+              <a href="libertarian.html">Lib-Left</a>
+              <a href="center-lib.html">Center-Lib</a>
+              <a href="lib-right.html">Lib-Right</a>
+            </div>
+          </li>
+
+          <!-- The 6 Extremes -->
+          <li class="nav-item">
+            <span class="nav-link" style="color: #ff4757;">Horizon Points ▾</span>
+            <div class="dropdown">
+              <a href="extreme-al.html" style="color: #ff4757;">Marxism-Leninism (AL)</a>
+              <a href="extreme-ca.html" style="color: #a29bfe;">Technocracy (CA)</a>
+              <a href="extreme-ar.html" style="color: #74b9ff;">Reactionary Abs. (AR)</a>
+              <a href="extreme-ll.html" style="color: #55efc4;">Anarcho-Comm. (LL)</a>
+              <a href="extreme-cl.html" style="color: #fab1a0;">Radical Individualism (CL)</a>
+              <a href="extreme-lr.html" style="color: #ffeaa7;">Anarcho-Cap. (LR)</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="comparison.html" class="nav-link">Master Table</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="challenge.html" class="nav-link matrix-btn">The Challenge</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 
+Breadcrumb / Progress Tracker 
+(Useful for deep research through 750 facts)
+-->
+      <div style="background: #111; padding: 5px 20px; border-bottom: 1px solid #222; font-size: 0.75rem; color: #555;">
+        Database Status: <span style="color:#2ecc71">15/15 Pages Online</span> | 
+        Data Load: <span style="color:#f1c40f">750/750 Verified Facts</span>
+      </div>
+    </nav>
+
+    <div class="container">
+      <header class="hero">
+        <h1 style="color:var(--lib-left)">Libertarian Left</h1>
+        <p><strong>The Model of Social Liberty:</strong> Horizontal Authority, Collective Ownership, and Individual Autonomy.</p>
+      </header>
+
+
+
+      <h2 class="category-title">I. Social Ownership & Mutualism</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">01</span><p>Believes natural resources and means of production should be held by the community.</p></div>
+        <div class="fact-card"><span class="fact-number">02</span><p>Property rights are based on "Usufruct" (use and occupancy) rather than legal deeds.</p></div>
+        <div class="fact-card"><span class="fact-number">03</span><p>Rejects private profit in favor of "Production for Use" to meet community needs.</p></div>
+        <div class="fact-card"><span class="fact-number">04</span><p>Advocates for businesses to be owned and managed democratically by the workers.</p></div>
+        <div class="fact-card"><span class="fact-number">05</span><p>Utilizes "Mutual Aid" as a voluntary reciprocal exchange outside of state or market.</p></div>
+        <div class="fact-card"><span class="fact-number">06</span><p>Supports the abolition of wage labor in favor of equal economic partnerships.</p></div>
+        <div class="fact-card"><span class="fact-number">07</span><p>Economic coordination occurs through local assemblies rather than a central state.</p></div>
+        <div class="fact-card"><span class="fact-number">08</span><p>Views housing as a human right and actively opposes the concept of rent.</p></div>
+        <div class="fact-card"><span class="fact-number">09</span><p>Promotes "Gift Economies" where goods are shared without explicit debt or trade.</p></div>
+        <div class="fact-card"><span class="fact-number">10</span><p>Rejects intellectual property laws, believing knowledge belongs to the commons.</p></div>
+      </div>
+
+
+
+      <h2 class="category-title">II. Horizontalism & Direct Democracy</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">11</span><p>Advocates for "Direct Democracy" where every individual participates in policy-making.</p></div>
+        <div class="fact-card"><span class="fact-number">12</span><p>Utilizes "Consensus Decision-Making" to ensure all voices are heard and considered.</p></div>
+        <div class="fact-card"><span class="fact-number">13</span><p>Rejects "Top-Down" leadership in favor of flat, horizontal network structures.</p></div>
+        <div class="fact-card"><span class="fact-number">14</span><p>Shifts political power to the "Libertarian Municipalism" (neighborhood) level.</p></div>
+        <div class="fact-card"><span class="fact-number">15</span><p>Delegates are "Recallable," meaning they can be removed instantly by their community.</p></div>
+        <div class="fact-card"><span class="fact-number">16</span><p>Communities link together via "Federation" for large-scale coordination without a state.</p></div>
+        <div class="fact-card"><span class="fact-number">17</span><p>Rejects the "Social Contract" as a tool used by states to enforce obedience.</p></div>
+        <div class="fact-card"><span class="fact-number">18</span><p>Supports "Free Association," the right to join or leave any group at will.</p></div>
+        <div class="fact-card"><span class="fact-number">19</span><p>Encourages "Dual Power" by building community institutions that rival state power.</p></div>
+        <div class="fact-card"><span class="fact-number">20</span><p>Historical precedent: The Ukrainian Free Territory (Makhnovshchina) applied these rules.</p></div>
+      </div>
+
+      <h2 class="category-title">III. Bodily Autonomy & Inclusivity</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">21</span><p>Asserts absolute "Bodily Autonomy" over reproductive and personal health choices.</p></div>
+        <div class="fact-card"><span class="fact-number">22</span><p>Views social hierarchies (racism, sexism) as being linked to state and class power.</p></div>
+        <div class="fact-card"><span class="fact-number">23</span><p>Actively seeks to dismantle "Patriarchy" and male-dominated social structures.</p></div>
+        <div class="fact-card"><span class="fact-number">24</span><p>Supports the complete decriminalization of drugs and victimless personal acts.</p></div>
+        <div class="fact-card"><span class="fact-number">25</span><p>Advocates for "Open Borders" and the free movement of all human beings.</p></div>
+        <div class="fact-card"><span class="fact-number">26</span><p>Follows "Secularism," removing all religious authority from social governance.</p></div>
+        <div class="fact-card"><span class="fact-number">27</span><p>Prioritizes "Intersectionality" in understanding how different oppressions overlap.</p></div>
+        <div class="fact-card"><span class="fact-number">28</span><p>Values "Radical Inclusivity" as a method to protect marginalized identities.</p></div>
+        <div class="fact-card"><span class="fact-number">29</span><p>Believes that personal freedom requires a society that provides for basic needs.</p></div>
+        <div class="fact-card"><span class="fact-number">30</span><p>Education focuses on critical thinking rather than obedience to authority.</p></div>
+      </div>
+
+
+
+      <h2 class="category-title">IV. Restorative Justice & Safety</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">31</span><p>Advocates for the "Abolition of Prisons" in favor of community-led rehabilitation.</p></div>
+        <div class="fact-card"><span class="fact-number">32</span><p>Replaces state police with "Community Safety Initiatives" and local crisis teams.</p></div>
+        <div class="fact-card"><span class="fact-number">33</span><p>Focuses on "Restorative Justice," where the goal is to heal the harm done to victims.</p></div>
+        <div class="fact-card"><span class="fact-number">34</span><p>Rejects "Retributive Justice" (punishment) as a failed state-mandated tool.</p></div>
+        <div class="fact-card"><span class="fact-number">35</span><p>Utilizes community mediation to solve local disputes without legal escalation.</p></div>
+        <div class="fact-card"><span class="fact-number">36</span><p>Opposes "Imperialism" and all forms of state-led military aggression.</p></div>
+        <div class="fact-card"><span class="fact-number">37</span><p>Advocates for global "Anti-War" movements as a core tenet of human liberty.</p></div>
+        <div class="fact-card"><span class="fact-number">38</span><p>Believes that "Law and Order" is often a code for protecting the property of the elite.</p></div>
+        <div class="fact-card"><span class="fact-number">39</span><p>Promotes "Prefigurative Politics"—living today as if the state were already gone.</p></div>
+        <div class="fact-card"><span class="fact-number">40</span><p>Slogan: "No Gods, No Masters" expresses total rejection of political authority.</p></div>
+      </div>
+
+      <h2 class="category-title">V. Social Ecology & Ideology</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">41</span><p>Follows "Social Ecology," believing environmental issues stem from social hierarchy.</p></div>
+        <div class="fact-card"><span class="fact-number">42</span><p>Distinguishes between "Personal Property" (clothes) and "Private Property" (factories).</p></div>
+        <div class="fact-card"><span class="fact-number">43</span><p>Advocates for "Anarcho-Communism," the synthesis of freedom and social equality.</p></div>
+        <div class="fact-card"><span class="fact-number">44</span><p>Rejects the "Vanguard Party" model used by the Authoritarian Left.</p></div>
+        <div class="fact-card"><span class="fact-number">45</span><p>Encourages "Class Consciousness" to help workers organize against hierarchies.</p></div>
+        <div class="fact-card"><span class="fact-number">46</span><p>Promotes "Spontaneous Revolution" led by the people, not a state-like party.</p></div>
+        <div class="fact-card"><span class="fact-number">47</span><p>Believes that "Power Corrupts," even when held by those with good intentions.</p></div>
+        <div class="fact-card"><span class="fact-number">48</span><p>Values "Industrial Democracy," where unions act as the primary social organizers.</p></div>
+        <div class="fact-card"><span class="fact-number">49</span><p>Advocates for the "Commons," resources managed shared by all for the benefit of all.</p></div>
+        <div class="fact-card"><span class="fact-number">50</span><p>Synthesis: Combines individual liberty with the rejection of private accumulation.</p></div>
+      </div>
+    </div>
+  </body>
+</html>

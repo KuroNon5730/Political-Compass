@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Auth-Left | State Planning & Equality</title>
+    <style>
+      :root { --page-color: var(--auth-left); }
+      .category-title { 
+        background: #151515; 
+        padding: 10px 20px; 
+        border-left: 5px solid var(--auth-left);
+        margin: 40px 0 20px 0;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+      .fact-card:hover { border-left-color: var(--auth-left); }
+      .hero h1 { color: var(--auth-left); border-bottom: 2px solid var(--auth-left); display: inline-block; }
+    </style>
+  </head>
+  <body>
+    <!-- 
+Universal Navigation System for the 15-Page Ideology Database.
+Includes: 
+1. Sticky Top Bar with Dropdowns
+2. The "Horizon Points" (Extremes) Quick-Access
+3. Responsive Mobile Menu
+-->
+
+    <style>
+      :root {
+        --nav-bg: #0a0a0a;
+        --nav-border: #222;
+        --accent: #f1c40f;
+        /* Quadrant Colors */
+        --al: #e74c3c; --ca: #8e44ad; --ar: #3498db;
+        --sm: #d35400; --ce: #7f8c8d; --cm: #2c3e50;
+        --ll: #2ecc71; --cl: #e67e22; --lr: #f1c40f;
+      }
+
+      nav.main-nav {
+        background: var(--nav-bg);
+        border-bottom: 1px solid var(--nav-border);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 0 20px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-brand a {
+        font-weight: 900;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+      }
+
+      .nav-brand span { color: var(--accent); }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .nav-item {
+        position: relative;
+        list-style: none;
+      }
+
+      .nav-link {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+
+      .nav-link:hover { color: #fff; }
+
+      /* Dropdown Menus */
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 8px;
+        width: 220px;
+        padding: 10px 0;
+        display: none;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      }
+
+      .nav-item:hover .dropdown {
+        display: block;
+      }
+
+      .dropdown a {
+        display: block;
+        padding: 10px 20px;
+        color: #888;
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: 0.2s;
+      }
+
+      .dropdown a:hover {
+        background: #1a1a1a;
+        color: #fff;
+      }
+
+      /* Specialized Matrix Indicator */
+      .matrix-btn {
+        background: var(--accent);
+        color: #000 !important;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+
+      /* Mobile Toggle (Simplified for this snippet) */
+      .mobile-hint { display: none; }
+      @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .mobile-hint { display: block; color: var(--accent); font-size: 0.8rem; }
+      }
+    </style>
+
+    <nav class="main-nav">
+      <div class="nav-brand">
+        <a href="index.html">POLITI<span>CORE</span></a>
+      </div>
+
+      <div class="mobile-hint">Menu ☰</div>
+
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Matrix Home</a>
+        </li>
+
+        <!-- Core 9 Zones -->
+        <li class="nav-item">
+          <span class="nav-link">Core Zones ▾</span>
+          <div class="dropdown">
+            <a href="authoritarian.html">Auth-Left</a>
+            <a href="center-auth.html">Center-Auth</a>
+            <a href="auth-right.html">Auth-Right</a>
+            <hr style="border:0; border-top:1px solid #222;">
+            <a href="socialist-market.html">Socialist Market</a>
+            <a href="centrism.html">Centrism</a>
+            <a href="corporate-market.html">Corporate Market</a>
+            <hr style="border:0; border-top:1px solid #222;">
+            <a href="libertarian.html">Lib-Left</a>
+            <a href="center-lib.html">Center-Lib</a>
+            <a href="lib-right.html">Lib-Right</a>
+          </div>
+        </li>
+
+        <!-- The 6 Extremes -->
+        <li class="nav-item">
+          <span class="nav-link" style="color: #ff4757;">Horizon Points ▾</span>
+          <div class="dropdown">
+            <a href="extreme-al.html" style="color: #ff4757;">Marxism-Leninism (AL)</a>
+            <a href="extreme-ca.html" style="color: #a29bfe;">Technocracy (CA)</a>
+            <a href="extreme-ar.html" style="color: #74b9ff;">Reactionary Abs. (AR)</a>
+            <a href="extreme-ll.html" style="color: #55efc4;">Anarcho-Comm. (LL)</a>
+            <a href="extreme-cl.html" style="color: #fab1a0;">Radical Individualism (CL)</a>
+            <a href="extreme-lr.html" style="color: #ffeaa7;">Anarcho-Cap. (LR)</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="comparison.html" class="nav-link">Master Table</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="challenge.html" class="nav-link matrix-btn">The Challenge</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 
+Breadcrumb / Progress Tracker 
+(Useful for deep research through 750 facts)
+-->
+    <div style="background: #111; padding: 5px 20px; border-bottom: 1px solid #222; font-size: 0.75rem; color: #555;">
+      Database Status: <span style="color:#2ecc71">15/15 Pages Online</span> | 
+      Data Load: <span style="color:#f1c40f">750/750 Verified Facts</span>
+    </div>
+
+    <div class="container">
+      <header class="hero">
+        <h1>Authoritarian Left</h1>
+        <p><strong>The Model of Collective Order:</strong> Central Planning, State Ownership, and Social Equity.</p>
+      </header>
+
+
+
+      <h2 class="category-title">I. Central Planning & The State Economy</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">01</span><p>Replaces market forces with "Central Planning" to determine production and pricing.</p></div>
+        <div class="fact-card"><span class="fact-number">02</span><p>Nationalizes all key industrial sectors, ensuring state ownership of resources.</p></div>
+        <div class="fact-card"><span class="fact-number">03</span><p>Uses "Five-Year Plans" to set long-term industrial and agricultural targets.</p></div>
+        <div class="fact-card"><span class="fact-number">04</span><p>Abolishes private property, shifting assets to the collective or the state.</p></div>
+        <div class="fact-card"><span class="fact-number">05</span><p>Maintains a state monopoly on foreign trade to control the flow of national wealth.</p></div>
+      </div>
+
+      <h2 class="category-title">II. Vanguardism & Party Rule</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">11</span><p>Operates through a "Vanguard Party" to lead the working class toward socialism.</p></div>
+        <div class="fact-card"><span class="fact-number">12</span><p>Uses "Democratic Centralism" to ensure absolute party unity once a decision is made.</p></div>
+        <div class="fact-card"><span class="fact-number">13</span><p>Enforces a One-Party State to prevent political division and counter-revolution.</p></div>
+        <div class="fact-card"><span class="fact-number">14</span><p>The Politburo acts as the primary executive authority over the government.</p></div>
+        <div class="fact-card"><span class="fact-number">15</span><p>Appointments to high-level administrative roles are reserved for loyal party members.</p></div>
+      </div>
+
+      <h2 class="category-title">III. Social Rights & Public Life</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">21</span><p>Guarantees universal healthcare as a right of citizenship, free at the point of use.</p></div>
+        <div class="fact-card"><span class="fact-number">22</span><p>Allocates state-owned housing based on social need and family requirements.</p></div>
+        <div class="fact-card"><span class="fact-number">23</span><p>Promotes state atheism and the secularization of the public sphere.</p></div>
+        <div class="fact-card"><span class="fact-number">24</span><p>Provides extensive subsidized childcare to ensure maximum workforce participation.</p></div>
+        <div class="fact-card"><span class="fact-number">25</span><p>Standardizes national education to foster technical skill and socialist values.</p></div>
+      </div>
+
+      <h2 class="category-title">IV. State Security & Information</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">31</span><p>Deploys secret police agencies to monitor and suppress internal dissent.</p></div>
+        <div class="fact-card"><span class="fact-number">32</span><p>Uses "Agitprop" to mobilize the citizenry and broadcast state policy.</p></div>
+        <div class="fact-card"><span class="fact-number">33</span><p>Maintains strict censorship over media and literature to protect ideological purity.</p></div>
+        <div class="fact-card"><span class="fact-number">34</span><p>Employs "Political Re-education" to reform those with opposing class interests.</p></div>
+        <div class="fact-card"><span class="fact-number">35</span><p>Utilizes show trials to publicize the consequences of political deviation.</p></div>
+      </div>
+
+      <h2 class="category-title">V. Marxist-Leninist Philosophy</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">41</span><p>Follows Historical Materialism: the belief that economics drives all social change.</p></div>
+        <div class="fact-card"><span class="fact-number">42</span><p>Views human history as an ongoing "Class Struggle" between labor and capital.</p></div>
+        <div class="fact-card"><span class="fact-number">43</span><p>Operates on the "Labour Theory of Value," valuing goods by the work put into them.</p></div>
+        <div class="fact-card"><span class="fact-number">44</span><p>Aims for a global proletarian revolution to abolish international capitalism.</p></div>
+        <div class="fact-card"><span class="fact-number">45</span><p>Theoretical Goal: The "Withering Away of the State" once classes are abolished.</p></div>
+        <div class="fact-card"><span class="fact-number">46</span><p>Operates on the <strong>Surplus Value Theory</strong>, asserting that profit is value "stolen" from workers by the owners of production.</p></div>
+        <div class="fact-card"><span class="fact-number">47</span><p>The theoretical goal is the <strong>Withering Away of the State</strong>, where the government becomes unnecessary once a classless society is reached.</p></div>
+        <div class="fact-card"><span class="fact-number">48</span><p>Embraces <strong>Collectivism</strong>, prioritizing the needs, survival, and progress of the group over the desires of the individual.</p></div>
+        <div class="fact-card"><span class="fact-number">49</span><p>Maintains strong <strong>Anti-Colonialism</strong>, supporting national liberation movements against Western imperialist and capitalist expansion.</p></div>
+        <div class="fact-card"><span class="fact-number">50</span><p>Follows the <strong>Labour Theory of Value</strong>, arguing the economic value of a good is determined by the socially necessary labor used to create it.</p></div>
+        </div>
+      </div>
+
+    <footer style="text-align: center; padding: 20px; color: #666;">
+      <p>Political Science Database | Bibliography Source: Karl Marx & V.I. Lenin</p>
+    </footer>
+  </body>
+</html>

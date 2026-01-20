@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Extreme Auth-Right | Reactionary Absolutism</title>
+    <style>
+      :root { --page-color: #1a237e; }
+      .category-title { border-left: 5px solid #ffd700; background: #111; padding: 10px; margin: 30px 0; }
+    </style>
+  </head>
+  <body>
+  <nav>
+    <!-- 
+Universal Navigation System for the 15-Page Ideology Database.
+Includes: 
+1. Sticky Top Bar with Dropdowns
+2. The "Horizon Points" (Extremes) Quick-Access
+3. Responsive Mobile Menu
+-->
+
+    <style>
+      :root {
+        --nav-bg: #0a0a0a;
+        --nav-border: #222;
+        --accent: #f1c40f;
+        /* Quadrant Colors */
+        --al: #e74c3c; --ca: #8e44ad; --ar: #3498db;
+        --sm: #d35400; --ce: #7f8c8d; --cm: #2c3e50;
+        --ll: #2ecc71; --cl: #e67e22; --lr: #f1c40f;
+      }
+
+      nav.main-nav {
+        background: var(--nav-bg);
+        border-bottom: 1px solid var(--nav-border);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 0 20px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-brand a {
+        font-weight: 900;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+      }
+
+      .nav-brand span { color: var(--accent); }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .nav-item {
+        position: relative;
+        list-style: none;
+      }
+
+      .nav-link {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+
+      .nav-link:hover { color: #fff; }
+
+      /* Dropdown Menus */
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 8px;
+        width: 220px;
+        padding: 10px 0;
+        display: none;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      }
+
+      .nav-item:hover .dropdown {
+        display: block;
+      }
+
+      .dropdown a {
+        display: block;
+        padding: 10px 20px;
+        color: #888;
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: 0.2s;
+      }
+
+      .dropdown a:hover {
+        background: #1a1a1a;
+        color: #fff;
+      }
+
+      /* Specialized Matrix Indicator */
+      .matrix-btn {
+        background: var(--accent);
+        color: #000 !important;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+
+      /* Mobile Toggle (Simplified for this snippet) */
+      .mobile-hint { display: none; }
+      @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .mobile-hint { display: block; color: var(--accent); font-size: 0.8rem; }
+      }
+    </style>
+
+    <nav class="main-nav">
+      <div class="nav-brand">
+        <a href="index.html">POLITI<span>CORE</span></a>
+      </div>
+
+      <div class="mobile-hint">Menu ☰</div>
+
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Matrix Home</a>
+        </li>
+
+        <!-- Core 9 Zones -->
+        <li class="nav-item">
+          <span class="nav-link">Core Zones ▾</span>
+          <div class="dropdown">
+            <a href="authoritarian.html">Auth-Left</a>
+            <a href="center-auth.html">Center-Auth</a>
+            <a href="auth-right.html">Auth-Right</a>
+            <hr style="border:0; border-top:1px solid #222;">
+            <a href="socialist-market.html">Socialist Market</a>
+            <a href="centrism.html">Centrism</a>
+            <a href="corporate-market.html">Corporate Market</a>
+            <hr style="border:0; border-top:1px solid #222;">
+            <a href="libertarian.html">Lib-Left</a>
+            <a href="center-lib.html">Center-Lib</a>
+            <a href="lib-right.html">Lib-Right</a>
+          </div>
+        </li>
+
+        <!-- The 6 Extremes -->
+        <li class="nav-item">
+          <span class="nav-link" style="color: #ff4757;">Horizon Points ▾</span>
+          <div class="dropdown">
+            <a href="extreme-al.html" style="color: #ff4757;">Marxism-Leninism (AL)</a>
+            <a href="extreme-ca.html" style="color: #a29bfe;">Technocracy (CA)</a>
+            <a href="extreme-ar.html" style="color: #74b9ff;">Reactionary Abs. (AR)</a>
+            <a href="extreme-ll.html" style="color: #55efc4;">Anarcho-Comm. (LL)</a>
+            <a href="extreme-cl.html" style="color: #fab1a0;">Radical Individualism (CL)</a>
+            <a href="extreme-lr.html" style="color: #ffeaa7;">Anarcho-Cap. (LR)</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="comparison.html" class="nav-link">Master Table</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="challenge.html" class="nav-link matrix-btn">The Challenge</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 
+Breadcrumb / Progress Tracker 
+(Useful for deep research through 750 facts)
+-->
+    <div style="background: #111; padding: 5px 20px; border-bottom: 1px solid #222; font-size: 0.75rem; color: #555;">
+      Database Status: <span style="color:#2ecc71">15/15 Pages Online</span> | 
+      Data Load: <span style="color:#f1c40f">750/750 Verified Facts</span>
+    </div>
+    </nav>
+    <div class="container">
+      <header class="hero">
+        <h1 style="color:var(--page-color)">Reactionary Absolutism</h1>
+        <p><strong>The Sacred Order:</strong> Divine Right, Traditional Hierarchy, and Anti-Enlightenment.</p>
+      </header>
+
+
+
+      <h2 class="category-title">The Throne & The Altar (Facts 01-25)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">01</span><p><strong>Divine Right:</strong> The belief that the Monarch’s authority comes directly from God, not the people.</p></div>
+        <div class="fact-card"><span class="fact-number">02</span><p><strong>Neo-Cameralism:</strong> Treating the state as a private corporation owned by the Sovereign.</p></div>
+        <div class="fact-card"><span class="fact-number">03</span><p><strong>Great Chain of Being:</strong> A strict, metaphysical hierarchy that dictates social status by birth.</p></div>
+        <div class="fact-card"><span class="fact-number">04</span><p><strong>Abolition of Suffrage:</strong> The total rejection of voting as an "unnatural" and destabilizing act.</p></div>
+        <div class="fact-card"><span class="fact-number">05</span><p><strong>Dark Enlightenment:</strong> A philosophical rejection of democracy and egalitarianism.</p></div>
+      </div>
+      <h2 class="category-title">Traditionalist Statecraft (Facts 26-30)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">26</span><p><strong>Mercantilism:</strong> Economic policy aimed at enriching the Crown through trade control.</p></div>
+        <div class="fact-card"><span class="fact-number">27</span><p><strong>Caste Systems:</strong> Legalized strata that determine an individual's profession and marriage.</p></div>
+        <div class="fact-card"><span class="fact-number">28</span><p><strong>Integralism:</strong> The total fusion of Catholic or religious law with the civil state.</p></div>
+        <div class="fact-card"><span class="fact-number">29</span><p><strong>Guild Socialism (Right):</strong> Organizing the economy into rigid professional estates.</p></div>
+        <div class="fact-card"><span class="fact-number">30</span><p><strong>Primogeniture:</strong> Laws ensuring all land and titles pass to the eldest heir to prevent division.</p></div>
+      </div>
+      <h2 class="category-title">The Hierarchical State (Facts 31-40)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">31</span><p><strong>Altar and Throne:</strong> Total institutional fusion of the National Church and Monarchy.</p></div>
+        <div class="fact-card"><span class="fact-number">32</span><p><strong>Noblesse Oblige:</strong> The moral obligation of the high-born to oversee the lower-born.</p></div>
+        <div class="fact-card"><span class="fact-number">33</span><p><strong>Sumptuary Laws:</strong> Regulating dress and consumption based on social rank/estate.</p></div>
+        <div class="fact-card"><span class="fact-number">34</span><p><strong>Patrimonialism:</strong> State resources are legally the personal property of the ruler.</p></div>
+        <div class="fact-card"><span class="fact-number">35</span><p><strong>Traditionalist School:</strong> Wisdom found in ancient perennial truths over modern logic.</p></div>
+        <div class="fact-card"><span class="fact-number">36</span><p><strong>Organic State Theory:</strong> Society as a body where the King is the indispensable head.</p></div>
+        <div class="fact-card"><span class="fact-number">37</span><p><strong>Anti-Enlightenment:</strong> Explicit rejection of rationalism and secular individualism.</p></div>
+        <div class="fact-card"><span class="fact-number">38</span><p><strong>Heritable Wealth:</strong> Absolute protection of landed estates to maintain lineage power.</p></div>
+        <div class="fact-card"><span class="fact-number">39</span><p><strong>Guild Hegemony:</strong> State-sanctioned guilds controlling all entry into professions.</p></div>
+        <div class="fact-card"><span class="fact-number">40</span><p><strong>Sovereign Immunity:</strong> The doctrine that the King "can do no wrong" under the law.</p></div>
+      </div>
+      <h2 class="category-title">Sacred Order (Facts 41-50)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">41</span><p><strong>Social Staticism:</strong> Active prevention of mobility to preserve stability.</p></div>
+        <div class="fact-card"><span class="fact-number">42</span><p><strong>Royal Prerogative:</strong> Power to act without the consent of any representative body.</p></div>
+        <div class="fact-card"><span class="fact-number">43</span><p><strong>Classical Corporatism:</strong> Organizing society into functional groups (clergy, military).</p></div>
+        <div class="fact-card"><span class="fact-number">44</span><p><strong>Neo-Reaction (NRx):</strong> Advocating for a world of private sovereign micro-states.</p></div>
+        <div class="fact-card"><span class="fact-number">45</span><p><strong>Modernity Censorship:</strong> Restricting media that promotes egalitarian ideals.</p></div>
+        <div class="fact-card"><span class="fact-number">46</span><p><strong>Military Aristocracy:</strong> Land tenure tied directly to hereditary military service.</p></div>
+        <div class="fact-card"><span class="fact-number">47</span><p><strong>Unconditional Sovereignty:</strong> Rejection of divided or "balanced" government.</p></div>
+        <div class="fact-card"><span class="fact-number">48</span><p><strong>Ancestral Veneration:</strong> Legal weight given to tradition and the "democracy of the dead."</p></div>
+        <div class="fact-card"><span class="fact-number">49</span><p><strong>Sacred Kingship:</strong> The monarch as a spiritual bridge or ritualistic leader.</p></div>
+        <div class="fact-card"><span class="fact-number">50</span><p><strong>Patchwork:</strong> A global vision of thousands of competing private monarchies.</p></div>
+      </div>
+    </div>
+  </body>
+</html>

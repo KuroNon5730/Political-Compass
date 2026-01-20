@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head><link rel="stylesheet" href="style.css"><title>Comparison Table</title></head>
+  <body>
+  <nav>
+    <!-- 
+Universal Navigation System for the 15-Page Ideology Database.
+Includes: 
+1. Sticky Top Bar with Dropdowns
+2. The "Horizon Points" (Extremes) Quick-Access
+3. Responsive Mobile Menu
+-->
+
+    <style>
+      :root {
+        --nav-bg: #0a0a0a;
+        --nav-border: #222;
+        --accent: #f1c40f;
+        /* Quadrant Colors */
+        --al: #e74c3c; --ca: #8e44ad; --ar: #3498db;
+        --sm: #d35400; --ce: #7f8c8d; --cm: #2c3e50;
+        --ll: #2ecc71; --cl: #e67e22; --lr: #f1c40f;
+      }
+
+      nav.main-nav {
+        background: var(--nav-bg);
+        border-bottom: 1px solid var(--nav-border);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 0 20px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-brand a {
+        font-weight: 900;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+      }
+
+      .nav-brand span { color: var(--accent); }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .nav-item {
+        position: relative;
+        list-style: none;
+      }
+
+      .nav-link {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+
+      .nav-link:hover { color: #fff; }
+
+      /* Dropdown Menus */
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 8px;
+        width: 220px;
+        padding: 10px 0;
+        display: none;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      }
+
+      .nav-item:hover .dropdown {
+        display: block;
+      }
+
+      .dropdown a {
+        display: block;
+        padding: 10px 20px;
+        color: #888;
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: 0.2s;
+      }
+
+      .dropdown a:hover {
+        background: #1a1a1a;
+        color: #fff;
+      }
+
+      /* Specialized Matrix Indicator */
+      .matrix-btn {
+        background: var(--accent);
+        color: #000 !important;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+
+      /* Mobile Toggle (Simplified for this snippet) */
+      .mobile-hint { display: none; }
+      @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .mobile-hint { display: block; color: var(--accent); font-size: 0.8rem; }
+      }
+    </style>
+
+    <nav class="main-nav">
+      <div class="nav-brand">
+        <a href="index.html">POLITI<span>CORE</span></a>
+      </div>
+
+      <div class="mobile-hint">Menu ☰</div>
+
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Matrix Home</a>
+        </li>
+
+        <!-- Core 9 Zones -->
+        <li class="nav-item">
+          <span class="nav-link">Core Zones ▾</span>
+          <div class="dropdown">
+            <a href="authoritarian.html">Auth-Left</a>
+            <a href="center-auth.html">Center-Auth</a>
+            <a href="auth-right.html">Auth-Right</a>
+            <hr style="border:0; border-top:1px solid #222;">
+            <a href="socialist-market.html">Socialist Market</a>
+            <a href="centrism.html">Centrism</a>
+            <a href="corporate-market.html">Corporate Market</a>
+            <hr style="border:0; border-top:1px solid #222;">
+            <a href="libertarian.html">Lib-Left</a>
+            <a href="center-lib.html">Center-Lib</a>
+            <a href="lib-right.html">Lib-Right</a>
+          </div>
+        </li>
+
+        <!-- The 6 Extremes -->
+        <li class="nav-item">
+          <span class="nav-link" style="color: #ff4757;">Horizon Points ▾</span>
+          <div class="dropdown">
+            <a href="extreme-al.html" style="color: #ff4757;">Marxism-Leninism (AL)</a>
+            <a href="extreme-ca.html" style="color: #a29bfe;">Technocracy (CA)</a>
+            <a href="extreme-ar.html" style="color: #74b9ff;">Reactionary Abs. (AR)</a>
+            <a href="extreme-ll.html" style="color: #55efc4;">Anarcho-Comm. (LL)</a>
+            <a href="extreme-cl.html" style="color: #fab1a0;">Radical Individualism (CL)</a>
+            <a href="extreme-lr.html" style="color: #ffeaa7;">Anarcho-Cap. (LR)</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="comparison.html" class="nav-link">Master Table</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="challenge.html" class="nav-link matrix-btn">The Challenge</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 
+Breadcrumb / Progress Tracker 
+(Useful for deep research through 750 facts)
+-->
+    <div style="background: #111; padding: 5px 20px; border-bottom: 1px solid #222; font-size: 0.75rem; color: #555;">
+      Database Status: <span style="color:#2ecc71">15/15 Pages Online</span> | 
+      Data Load: <span style="color:#f1c40f">750/750 Verified Facts</span>
+    </div>
+  </nav>  
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Comparison Matrix | Ideology Database</title>
+    <style>
+      .matrix-table { width: 100%; border-collapse: collapse; margin-top: 30px; font-size: 0.9rem; }
+      .matrix-table th, .matrix-table td { border: 1px solid #333; padding: 15px; text-align: left; }
+      .matrix-table th { background: #1a1a1a; color: var(--lib-right); position: sticky; top: 60px; }
+      .tag { padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+      .extreme-row { background: #0a0a0a; font-style: italic; }
+    </style>
+      </head>
+        <div class="container">
+          <header class="hero">
+            <h1>Comparison Matrix</h1>
+            <p>Directly comparing the economic and social pillars of all 13 categorized zones.</p>
+          </header>
+
+
+
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>Ideology</th>
+                <th>Economic Core</th>
+                <th>Property Rights</th>
+                <th>Authority Source</th>
+                <th>Tactical Concept</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="extreme-row">
+                <td><span class="tag">Marxism-Leninism</span></td>
+                <td>Command Economy</td>
+                <td>State Owned</td>
+                <td>Vanguard Party</td>
+                <td>Five-Year Plans</td>
+              </tr>
+              <tr>
+                <td>Auth-Left</td>
+                <td>Planned Industry</td>
+                <td>Socially Owned</td>
+                <td>Central State</td>
+                <td>Nationalization</td>
+              </tr>
+              <tr>
+                <td>Auth-Center</td>
+                <td>Regulatory</td>
+                <td>Mixed/Regulated</td>
+                <td>Bureaucracy</td>
+                <td>Technocracy</td>
+              </tr>
+              <tr>
+                <td>Auth-Right</td>
+                <td>State Capitalism</td>
+                <td>Private (Regulated)</td>
+                <td>National Tradition</td>
+                <td>Autarky</td>
+              </tr>
+              <tr class="extreme-row">
+                <td><span class="tag">Reactionary Absolutism</span></td>
+                <td>Mercantilist</td>
+                <td>Hereditary</td>
+                <td>The Sovereign</td>
+                <td>Divine Right</td>
+              <tr>
+                <td>Soc-Market</td>
+                <td>Cooperative Market</td>
+                <td>Worker Owned</td>
+                <td>Labour Councils</td>
+                <td>Industrial Democracy</td>
+              </tr>
+              <tr style="background: #151515;">
+                <td>Centrism</td>
+                <td>Mixed Economy</td>
+                <td>Dual System</td>
+                <td>Democratic Consensus</td>
+                <td>Incrementalism</td>
+              </tr>
+              <tr>
+                <td>Corp-Market</td>
+                <td>Institutional Market</td>
+                <td>Shareholder Owned</td>
+                <td>Global Rule of Law</td>
+                <td>Global Trade</td>
+              </tr>
+              <tr class="extreme-row">
+                <td><span class="tag">Anarcho-
+                  Communism</span></td>
+                <td>Gift Economy</td>
+                <td>Common (None)</td>
+                <td>Voluntaryism</td>
+                <td>Statelessness</td>
+              </tr>
+              <tr>
+                <td>Lib-Left</td>
+                <td>Decentralized Socialism</td>
+                <td>Usage (Usufruct)</td>
+                <td>Local Councils</td>
+                <td>Mutual Aid</td>
+              </tr>
+              <tr>
+                <td>Lib-Center</td>
+                <td>Social Market</td>
+                <td>Individual</td>
+                <td>Digital Defense</td>
+                <td>Privacy/Encryption</td>
+              </tr>  
+              <tr>
+                <td>Lib-Right</td>
+                <td>Laissez-Faire</td>
+                <td>Absolute Private</td>
+                <td>Individual Consent</td>
+                <td>NAP</td>
+              </tr>
+              <tr class="extreme-row">
+                <td><span class="tag">Anarcho-Capitalism</span></td>
+                <td>Pure Market</td>
+                <td>Absolute Property</td>
+                <td>Private Contract</td>
+                <td>Polysentric Law</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </body>
+    </html>

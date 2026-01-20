@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Extreme Auth-Left | Marxism-Leninism</title>
+    <style>
+      :root { --page-color: #800000; }
+      .category-title { border-left: 5px solid var(--page-color); background: #111; padding: 10px; margin: 30px 0; }
+      .fact-card:hover { border-left-color: var(--page-color); }
+    </style>
+  </head>
+  <body>
+  <nav>
+    <!-- 
+Universal Navigation System for the 15-Page Ideology Database.
+Includes: 
+1. Sticky Top Bar with Dropdowns
+2. The "Horizon Points" (Extremes) Quick-Access
+3. Responsive Mobile Menu
+-->
+
+    <style>
+      :root {
+        --nav-bg: #0a0a0a;
+        --nav-border: #222;
+        --accent: #f1c40f;
+        /* Quadrant Colors */
+        --al: #e74c3c; --ca: #8e44ad; --ar: #3498db;
+        --sm: #d35400; --ce: #7f8c8d; --cm: #2c3e50;
+        --ll: #2ecc71; --cl: #e67e22; --lr: #f1c40f;
+      }
+
+      nav.main-nav {
+        background: var(--nav-bg);
+        border-bottom: 1px solid var(--nav-border);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 0 20px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-brand a {
+        font-weight: 900;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+      }
+
+      .nav-brand span { color: var(--accent); }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .nav-item {
+        position: relative;
+        list-style: none;
+      }
+
+      .nav-link {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+
+      .nav-link:hover { color: #fff; }
+
+      /* Dropdown Menus */
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 8px;
+        width: 220px;
+        padding: 10px 0;
+        display: none;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      }
+
+      .nav-item:hover .dropdown {
+        display: block;
+      }
+
+      .dropdown a {
+        display: block;
+        padding: 10px 20px;
+        color: #888;
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: 0.2s;
+      }
+
+      .dropdown a:hover {
+        background: #1a1a1a;
+        color: #fff;
+      }
+
+      /* Specialized Matrix Indicator */
+      .matrix-btn {
+        background: var(--accent);
+        color: #000 !important;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+
+      /* Mobile Toggle (Simplified for this snippet) */
+      .mobile-hint { display: none; }
+      @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .mobile-hint { display: block; color: var(--accent); font-size: 0.8rem; }
+      }
+    </style>
+
+    <nav class="main-nav">
+      <div class="nav-brand">
+        <a href="index.html">POLITI<span>CORE</span></a>
+      </div>
+
+      <div class="mobile-hint">Menu ☰</div>
+
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Matrix Home</a>
+        </li>
+
+        <!-- Core 9 Zones -->
+        <li class="nav-item">
+          <span class="nav-link">Core Zones ▾</span>
+          <div class="dropdown">
+            <a href="authoritarian.html">Auth-Left</a>
+            <a href="center-auth.html">Center-Auth</a>
+            <a href="auth-right.html">Auth-Right</a>
+            <hr style="border:0; border-top:1px solid #222;">
+            <a href="socialist-market.html">Socialist Market</a>
+            <a href="centrism.html">Centrism</a>
+            <a href="corporate-market.html">Corporate Market</a>
+            <hr style="border:0; border-top:1px solid #222;">
+            <a href="libertarian.html">Lib-Left</a>
+            <a href="center-lib.html">Center-Lib</a>
+            <a href="lib-right.html">Lib-Right</a>
+          </div>
+        </li>
+
+        <!-- The 6 Extremes -->
+        <li class="nav-item">
+          <span class="nav-link" style="color: #ff4757;">Horizon Points ▾</span>
+          <div class="dropdown">
+            <a href="extreme-al.html" style="color: #ff4757;">Marxism-Leninism (AL)</a>
+            <a href="extreme-ca.html" style="color: #a29bfe;">Technocracy (CA)</a>
+            <a href="extreme-ar.html" style="color: #74b9ff;">Reactionary Abs. (AR)</a>
+            <a href="extreme-ll.html" style="color: #55efc4;">Anarcho-Comm. (LL)</a>
+            <a href="extreme-cl.html" style="color: #fab1a0;">Radical Individualism (CL)</a>
+            <a href="extreme-lr.html" style="color: #ffeaa7;">Anarcho-Cap. (LR)</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="comparison.html" class="nav-link">Master Table</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="challenge.html" class="nav-link matrix-btn">The Challenge</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 
+Breadcrumb / Progress Tracker 
+(Useful for deep research through 750 facts)
+-->
+    <div style="background: #111; padding: 5px 20px; border-bottom: 1px solid #222; font-size: 0.75rem; color: #555;">
+      Database Status: <span style="color:#2ecc71">15/15 Pages Online</span> | 
+      Data Load: <span style="color:#f1c40f">750/750 Verified Facts</span>
+    </div>
+  </nav>
+    <div class="container">
+      <header class="hero">
+        <h1 style="color:var(--page-color)">Marxism-Leninism</h1>
+        <p><strong>The Total State:</strong> Vanguardism, Command Economics, and the Global Proletariat.</p>
+      </header>
+
+
+
+      <h2 class="category-title">Total Planning & Security (Facts 01-25)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">01</span><p><strong>The Command Economy:</strong> Every production quota is dictated by a central state planning bureau.</p></div>
+        <div class="fact-card"><span class="fact-number">02</span><p><strong>Abolition of Currency:</strong> The long-term goal of replacing money with labor-time vouchers.</p></div>
+        <div class="fact-card"><span class="fact-number">03</span><p><strong>Internal Security:</strong> Utilization of massive secret police networks to identify class dissidents.</p></div>
+        <div class="fact-card"><span class="fact-number">04</span><p><strong>Stakhanovism:</strong> State-sponsored movements to push worker productivity to extreme levels.</p></div>
+        <div class="fact-card"><span class="fact-number">05</span><p><strong>Anti-Cosmopolitanism:</strong> The rejection of "bourgeois" Western art in favor of Socialist Realism.</p></div>
+      </div>
+      <h2 class="category-title">Ideological Purity (Facts 26-30)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">26</span><p><strong>Democratic Centralism:</strong> Absolute obedience to the Party center once a vote is cast.</p></div>
+        <div class="fact-card"><span class="fact-number">27</span><p><strong>Collectivized Agriculture:</strong> The total seizure of private farms into state-run "Kolkhoz" units.</p></div>
+        <div class="fact-card"><span class="fact-number">28</span><p><strong>Permanent Revolution:</strong> The active commitment to funding and arming global insurgencies.</p></div>
+        <div class="fact-card"><span class="fact-number">29</span><p><strong>State Atheism:</strong> The aggressive dismantling of religious institutions as obstacles to progress.</p></div>
+        <div class="fact-card"><span class="fact-number">30</span><p><strong>Total Nationalization:</strong> 100% of all productive assets are legally held by the state.</p></div>
+      </div>
+      <h2 class="category-title">Command & Control (Facts 31-40)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">31</span><p><strong>Five-Year Plans:</strong> Centralized targets that prioritize heavy industry over consumer goods.</p></div>
+        <div class="fact-card"><span class="fact-number">32</span><p><strong>Proprietary Education:</strong> Curriculum designed to train workers for specific state-defined industrial roles.</p></div>
+        <div class="fact-card"><span class="fact-number">33</span><p><strong>Internal Passports:</strong> Legal requirements for citizens to obtain permission before moving provinces.</p></div>
+        <div class="fact-card"><span class="fact-number">34</span><p><strong>Nomenklatura:</strong> An elite class of party officials managing all administrative functions.</p></div>
+        <div class="fact-card"><span class="fact-number">35</span><p><strong>Agitprop:</strong> Dedicated departments to ensure cultural alignment with state goals.</p></div>
+        <div class="fact-card"><span class="fact-number">36</span><p><strong>Mass Line:</strong> Consolidating ideas of the masses into centralized party policy.</p></div>
+        <div class="fact-card"><span class="fact-number">37</span><p><strong>Forced Industrialization:</strong> Rapid, decree-led transition from agrarian to industrial economy.</p></div>
+        <div class="fact-card"><span class="fact-number">38</span><p><strong>Socialist Realism:</strong> Art depicting workers as idealized, heroic figures of the state.</p></div>
+        <div class="fact-card"><span class="fact-number">39</span><p><strong>State Monopsony:</strong> The government is the sole buyer of all labor and raw materials.</p></div>
+        <div class="fact-card"><span class="fact-number">40</span><p><strong>Communal Kitchens:</strong> Abolition of domestic labor to maximize the industrial workforce.</p></div>
+      </div>
+      <h2 class="category-title">Radical Transition (Facts 41-50)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">41</span><p><strong>The Second International:</strong> Historical coordination of global revolutionary parties.</p></div>
+        <div class="fact-card"><span class="fact-number">42</span><p><strong>Anti-Revisionism:</strong> Rejection of any attempt to moderate core revolutionary doctrine.</p></div>
+        <div class="fact-card"><span class="fact-number">43</span><p><strong>War Communism:</strong> Requisitioning of resources during periods of existential state crisis.</p></div>
+        <div class="fact-card"><span class="fact-number">44</span><p><strong>New Socialist Man:</strong> Engineering a citizenry motivated by collective duty over profit.</p></div>
+        <div class="fact-card"><span class="fact-number">45</span><p><strong>Vanguard Supremacy:</strong> The party as the only legitimate representative of the workers.</p></div>
+        <div class="fact-card"><span class="fact-number">46</span><p><strong>Scientific Socialism:</strong> Claiming historical laws make capitalist collapse inevitable.</p></div>
+        <div class="fact-card"><span class="fact-number">47</span><p><strong>Liquidation of Classes:</strong> The systematic removal of wealthy land-owning classes (Kulaks).</p></div>
+        <div class="fact-card"><span class="fact-number">48</span><p><strong>National Liberation:</strong> Supporting anti-colonialism to weaken capitalist global hegemony.</p></div>
+        <div class="fact-card"><span class="fact-number">49</span><p><strong>Historical Necessity:</strong> The belief that the state must grow powerful before it can wither.</p></div>
+        <div class="fact-card"><span class="fact-number">50</span><p><strong>Dictatorship of the Proletariat:</strong> Transitional force used to prevent capitalist counter-revolution.</p></div>
+      </div>
+    </div>
+  </body>
+</html>

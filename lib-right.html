@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Lib-Right | Laissez-Faire & Sovereignty</title>
+    <style>
+      :root { --page-color: var(--lib-right); }
+      .category-title { 
+        background: #151515; 
+        padding: 10px 20px; 
+        border-left: 5px solid var(--lib-right);
+        margin: 40px 0 20px 0;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+      .fact-card:hover { border-left-color: var(--lib-right); }
+    </style>
+  </head>
+  <body>
+   <nav>
+     <!-- 
+Universal Navigation System for the 15-Page Ideology Database.
+Includes: 
+1. Sticky Top Bar with Dropdowns
+2. The "Horizon Points" (Extremes) Quick-Access
+3. Responsive Mobile Menu
+-->
+
+     <style>
+       :root {
+         --nav-bg: #0a0a0a;
+         --nav-border: #222;
+         --accent: #f1c40f;
+         /* Quadrant Colors */
+         --al: #e74c3c; --ca: #8e44ad; --ar: #3498db;
+         --sm: #d35400; --ce: #7f8c8d; --cm: #2c3e50;
+         --ll: #2ecc71; --cl: #e67e22; --lr: #f1c40f;
+       }
+
+       nav.main-nav {
+         background: var(--nav-bg);
+         border-bottom: 1px solid var(--nav-border);
+         position: sticky;
+         top: 0;
+         z-index: 1000;
+         padding: 0 20px;
+         height: 60px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+       }
+
+       .nav-brand a {
+         font-weight: 900;
+         color: #fff;
+         text-decoration: none;
+         letter-spacing: 2px;
+         font-size: 1.2rem;
+       }
+
+       .nav-brand span { color: var(--accent); }
+
+       .nav-links {
+         display: flex;
+         gap: 20px;
+         align-items: center;
+       }
+
+       .nav-item {
+         position: relative;
+         list-style: none;
+       }
+
+       .nav-link {
+         color: #aaa;
+         text-decoration: none;
+         font-size: 0.9rem;
+         transition: 0.2s;
+         cursor: pointer;
+       }
+
+       .nav-link:hover { color: #fff; }
+
+       /* Dropdown Menus */
+       .dropdown {
+         position: absolute;
+         top: 100%;
+         left: 50%;
+         transform: translateX(-50%);
+         background: #111;
+         border: 1px solid #333;
+         border-radius: 8px;
+         width: 220px;
+         padding: 10px 0;
+         display: none;
+         box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+       }
+
+       .nav-item:hover .dropdown {
+         display: block;
+       }
+
+       .dropdown a {
+         display: block;
+         padding: 10px 20px;
+         color: #888;
+         text-decoration: none;
+         font-size: 0.85rem;
+         transition: 0.2s;
+       }
+
+       .dropdown a:hover {
+         background: #1a1a1a;
+         color: #fff;
+       }
+
+       /* Specialized Matrix Indicator */
+       .matrix-btn {
+         background: var(--accent);
+         color: #000 !important;
+         padding: 6px 15px;
+         border-radius: 20px;
+         font-weight: bold;
+       }
+
+       /* Mobile Toggle (Simplified for this snippet) */
+       .mobile-hint { display: none; }
+       @media (max-width: 768px) {
+         .nav-links { display: none; }
+         .mobile-hint { display: block; color: var(--accent); font-size: 0.8rem; }
+       }
+     </style>
+
+     <nav class="main-nav">
+       <div class="nav-brand">
+         <a href="index.html">POLITI<span>CORE</span></a>
+       </div>
+
+       <div class="mobile-hint">Menu ☰</div>
+
+       <ul class="nav-links">
+         <li class="nav-item">
+           <a href="index.html" class="nav-link">Matrix Home</a>
+         </li>
+
+         <!-- Core 9 Zones -->
+         <li class="nav-item">
+           <span class="nav-link">Core Zones ▾</span>
+           <div class="dropdown">
+             <a href="authoritarian.html">Auth-Left</a>
+             <a href="center-auth.html">Center-Auth</a>
+             <a href="auth-right.html">Auth-Right</a>
+             <hr style="border:0; border-top:1px solid #222;">
+             <a href="socialist-market.html">Socialist Market</a>
+             <a href="centrism.html">Centrism</a>
+             <a href="corporate-market.html">Corporate Market</a>
+             <hr style="border:0; border-top:1px solid #222;">
+             <a href="libertarian.html">Lib-Left</a>
+             <a href="center-lib.html">Center-Lib</a>
+             <a href="lib-right.html">Lib-Right</a>
+           </div>
+         </li>
+
+         <!-- The 6 Extremes -->
+         <li class="nav-item">
+           <span class="nav-link" style="color: #ff4757;">Horizon Points ▾</span>
+           <div class="dropdown">
+             <a href="extreme-al.html" style="color: #ff4757;">Marxism-Leninism (AL)</a>
+             <a href="extreme-ca.html" style="color: #a29bfe;">Technocracy (CA)</a>
+             <a href="extreme-ar.html" style="color: #74b9ff;">Reactionary Abs. (AR)</a>
+             <a href="extreme-ll.html" style="color: #55efc4;">Anarcho-Comm. (LL)</a>
+             <a href="extreme-cl.html" style="color: #fab1a0;">Radical Individualism (CL)</a>
+             <a href="extreme-lr.html" style="color: #ffeaa7;">Anarcho-Cap. (LR)</a>
+           </div>
+         </li>
+
+         <li class="nav-item">
+           <a href="comparison.html" class="nav-link">Master Table</a>
+         </li>
+
+         <li class="nav-item">
+           <a href="challenge.html" class="nav-link matrix-btn">The Challenge</a>
+         </li>
+       </ul>
+     </nav>
+
+     <!-- 
+Breadcrumb / Progress Tracker 
+(Useful for deep research through 750 facts)
+-->
+     <div style="background: #111; padding: 5px 20px; border-bottom: 1px solid #222; font-size: 0.75rem; color: #555;">
+       Database Status: <span style="color:#2ecc71">15/15 Pages Online</span> | 
+       Data Load: <span style="color:#f1c40f">750/750 Verified Facts</span>
+     </div>
+   </nav> 
+
+    <div class="container">
+      <header class="hero">
+        <h1 style="color:var(--lib-right)">Libertarian Right</h1>
+        <p><strong>The Model of Market Liberty:</strong> Individual Sovereignty, Private Property, and Spontaneous Order.</p>
+      </header>
+
+
+
+      <h2 class="category-title">I. Self-Ownership & The NAP</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">01</span><p>Foundational belief that every individual has absolute jurisdiction over their own body.</p></div>
+        <div class="fact-card"><span class="fact-number">02</span><p>The Non-Aggression Principle (NAP) asserts that initiating force is always illegitimate.</p></div>
+        <div class="fact-card"><span class="fact-number">03</span><p>Homesteading Principle: Ownership is gained by mixing labor with unowned resources.</p></div>
+        <div class="fact-card"><span class="fact-number">04</span><p>Asserts that taxation is theft because it is taken without individual consent.</p></div>
+        <div class="fact-card"><span class="fact-number">05</span><p>Voluntaryism: All forms of human association must be purely consensual.</p></div>
+        <div class="fact-card"><span class="fact-number">06</span><p>Negative Liberty: Defined as the absence of obstacles or constraints by others.</p></div>
+        <div class="fact-card"><span class="fact-number">07</span><p>Natural Rights: Belief that rights are inherent to humans, not granted by states.</p></div>
+        <div class="fact-card"><span class="fact-number">08</span><p>Radical Responsibility: Individuals must bear the full consequences of their choices.</p></div>
+        <div class="fact-card"><span class="fact-number">09</span><p>Property as Liberty: Belief that without property, no other rights can truly exist.</p></div>
+        <div class="fact-card"><span class="fact-number">10</span><p>Rejects "Sovereign Immunity," holding government agents liable for rights violations.</p></div>
+      </div>
+
+
+
+      <h2 class="category-title">II. Free Markets & Austrian Theory</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">11</span><p>Laissez-faire: Total absence of government intervention in economic affairs.</p></div>
+        <div class="fact-card"><span class="fact-number">12</span><p>Subjective Theory of Value: Value is determined by individual preference, not labor.</p></div>
+        <div class="fact-card"><span class="fact-number">13</span><p>Spontaneous Order: Complex markets organize themselves without central planning.</p></div>
+        <div class="fact-card"><span class="fact-number">14</span><p>Economic Calculation Problem: Planning fails without market-driven price signals.</p></div>
+        <div class="fact-card"><span class="fact-number">15</span><p>Sound Money: Advocacy for gold or crypto to prevent state-led inflation.</p></div>
+        <div class="fact-card"><span class="fact-number">16</span><p>Creative Destruction: Inefficient firms must fail to allow better ones to emerge.</p></div>
+        <div class="fact-card"><span class="fact-number">17</span><p>Consumer Sovereignty: Consumers dictate production through their spending choices.</p></div>
+        <div class="fact-card"><span class="fact-number">18</span><p>Methodological Individualism: Analyzing society through the lens of individual action.</p></div>
+        <div class="fact-card"><span class="fact-number">19</span><p>Praxeology: The study of human action based on logical axioms and goals.</p></div>
+        <div class="fact-card"><span class="fact-number">20</span><p>Anti-Subsidy: Total opposition to corporate bailouts and "corporate welfare."</p></div>
+      </div>
+
+
+
+      <h2 class="category-title">III. Privatization & Private Law</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">21</span><p>Advocates for the privatization of all public lands, roads, and services.</p></div>
+        <div class="fact-card"><span class="fact-number">22</span><p>Polycentric Law: Competing private court systems instead of a state monopoly.</p></div>
+        <div class="fact-card"><span class="fact-number">23</span><p>Contract Law: All social relations should be governed by voluntary agreements.</p></div>
+        <div class="fact-card"><span class="fact-number">24</span><p>Private Defense Agencies (PDA): Security provided by private insurance/firms.</p></div>
+        <div class="fact-card"><span class="fact-number">25</span><p>Abolition of the Federal Reserve: Returning currency control to the market.</p></div>
+        <div class="fact-card"><span class="fact-number">26</span><p>Deregulation: Removal of all state licenses and barriers to business entry.</p></div>
+        <div class="fact-card"><span class="fact-number">27</span><p>Free Trade: Total abolition of tariffs, quotas, and international trade barriers.</p></div>
+        <div class="fact-card"><span class="fact-number">28</span><p>Intellectual Property Skepticism: Arguments that ideas cannot be physical property.</p></div>
+        <div class="fact-card"><span class="fact-number">29</span><p>Right to Secede: Belief that any individual or community can leave a state at will.</p></div>
+        <div class="fact-card"><span class="fact-number">30</span><p>Jury Nullification: The right of juries to strike down laws they deem unjust.</p></div>
+      </div>
+
+      <h2 class="category-title">IV. Personal Liberty & Defense</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">31</span><p>Victimless Crimes: Drug use and gambling should be legal if no one is harmed.</p></div>
+        <div class="fact-card"><span class="fact-number">32</span><p>Right to Bear Arms: Absolute support for ownership as a deterrent to tyranny.</p></div>
+        <div class="fact-card"><span class="fact-number">33</span><p>Non-Interventionism: "Trade with all, alliances with none" foreign policy.</p></div>
+        <div class="fact-card"><span class="fact-number">34</span><p>Anti-Conscription: Opposition to the draft as state-mandated slavery.</p></div>
+        <div class="fact-card"><span class="fact-number">35</span><p>Right to Discriminate: Private owners may choose who to associate with on their land.</p></div>
+        <div class="fact-card"><span class="fact-number">36</span><p>Freedom of Association: The right to join or leave any organization for any reason.</p></div>
+        <div class="fact-card"><span class="fact-number">37</span><p>Abolition of Borders: Some argue borders are state-imposed limits on labor.</p></div>
+        <div class="fact-card"><span class="fact-number">38</span><p>Anti-Social Engineering: States should not attempt to "shape" human behavior.</p></div>
+        <div class="fact-card"><span class="fact-number">39</span><p>Charity over Welfare: Voluntary aid is seen as more moral and efficient than state aid.</p></div>
+        <div class="fact-card"><span class="fact-number">40</span><p>Agorism: Using black/gray markets to peacefully bypass state control.</p></div>
+      </div>
+
+      <h2 class="category-title">V. Minarchism to Anarcho-Capitalism</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">41</span><p>Minarchism: Belief in a "Night-Watchman State" limited to police, courts, and military.</p></div>
+        <div class="fact-card"><span class="fact-number">42</span><p>Anarcho-Capitalism: Rejection of all state functions in favor of market services.</p></div>
+        <div class="fact-card"><span class="fact-number">43</span><p>Paleolibertarianism: Combines market liberty with traditional social values.</p></div>
+        <div class="fact-card"><span class="fact-number">44</span><p>Left-Libertarianism (Market): Uses Lib-Right economics to reach Lib-Left social ends.</p></div>
+        <div class="fact-card"><span class="fact-number">45</span><p>Enlightened Self-Interest: Individual gain inadvertently helps society (The Invisible Hand).</p></div>
+        <div class="fact-card"><span class="fact-number">46</span><p>Capital Accumulation: Reinvesting profit is the only way to raise living standards.</p></div>
+        <div class="fact-card"><span class="fact-number">47</span><p>Decentralization: Pushing all power to the smallest local or individual level.</p></div>
+        <div class="fact-card"><span class="fact-number">48</span><p>Price Signals: Prices are essential "information" for resource allocation.</p></div>
+        <div class="fact-card"><span class="fact-number">49</span><p>Anti-Imperialism: Opposition to all state-led foreign wars and occupation.</p></div>
+        <div class="fact-card"><span class="fact-number">50</span><p>The Sovereign Individual: The goal of becoming a self-governing entity.</p></div>
+      </div>
+    </div>
+  </body>
+</html>

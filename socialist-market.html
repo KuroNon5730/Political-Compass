@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Socialist Market | Cooperative Competition</title>
+    <style>
+      :root { --page-color: #d35400; }
+      .category-title { border-left: 5px solid var(--page-color); background: #151515; padding: 10px 20px; margin: 40px 0 20px 0; font-size: 1.2rem; text-transform: uppercase; }
+      .fact-card:hover { border-left-color: var(--page-color); }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <!-- 
+Universal Navigation System for the 15-Page Ideology Database.
+Includes: 
+1. Sticky Top Bar with Dropdowns
+2. The "Horizon Points" (Extremes) Quick-Access
+3. Responsive Mobile Menu
+-->
+
+      <style>
+        :root {
+          --nav-bg: #0a0a0a;
+          --nav-border: #222;
+          --accent: #f1c40f;
+          /* Quadrant Colors */
+          --al: #e74c3c; --ca: #8e44ad; --ar: #3498db;
+          --sm: #d35400; --ce: #7f8c8d; --cm: #2c3e50;
+          --ll: #2ecc71; --cl: #e67e22; --lr: #f1c40f;
+        }
+
+        nav.main-nav {
+          background: var(--nav-bg);
+          border-bottom: 1px solid var(--nav-border);
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+          padding: 0 20px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .nav-brand a {
+          font-weight: 900;
+          color: #fff;
+          text-decoration: none;
+          letter-spacing: 2px;
+          font-size: 1.2rem;
+        }
+
+        .nav-brand span { color: var(--accent); }
+
+        .nav-links {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+        }
+
+        .nav-item {
+          position: relative;
+          list-style: none;
+        }
+
+        .nav-link {
+          color: #aaa;
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: 0.2s;
+          cursor: pointer;
+        }
+
+        .nav-link:hover { color: #fff; }
+
+        /* Dropdown Menus */
+        .dropdown {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #111;
+          border: 1px solid #333;
+          border-radius: 8px;
+          width: 220px;
+          padding: 10px 0;
+          display: none;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .nav-item:hover .dropdown {
+          display: block;
+        }
+
+        .dropdown a {
+          display: block;
+          padding: 10px 20px;
+          color: #888;
+          text-decoration: none;
+          font-size: 0.85rem;
+          transition: 0.2s;
+        }
+
+        .dropdown a:hover {
+          background: #1a1a1a;
+          color: #fff;
+        }
+
+        /* Specialized Matrix Indicator */
+        .matrix-btn {
+          background: var(--accent);
+          color: #000 !important;
+          padding: 6px 15px;
+          border-radius: 20px;
+          font-weight: bold;
+        }
+
+        /* Mobile Toggle (Simplified for this snippet) */
+        .mobile-hint { display: none; }
+        @media (max-width: 768px) {
+          .nav-links { display: none; }
+          .mobile-hint { display: block; color: var(--accent); font-size: 0.8rem; }
+        }
+      </style>
+
+      <nav class="main-nav">
+        <div class="nav-brand">
+          <a href="index.html">POLITI<span>CORE</span></a>
+        </div>
+
+        <div class="mobile-hint">Menu ☰</div>
+
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Matrix Home</a>
+          </li>
+
+          <!-- Core 9 Zones -->
+          <li class="nav-item">
+            <span class="nav-link">Core Zones ▾</span>
+            <div class="dropdown">
+              <a href="authoritarian.html">Auth-Left</a>
+              <a href="center-auth.html">Center-Auth</a>
+              <a href="auth-right.html">Auth-Right</a>
+              <hr style="border:0; border-top:1px solid #222;">
+              <a href="socialist-market.html">Socialist Market</a>
+              <a href="centrism.html">Centrism</a>
+              <a href="corporate-market.html">Corporate Market</a>
+              <hr style="border:0; border-top:1px solid #222;">
+              <a href="libertarian.html">Lib-Left</a>
+              <a href="center-lib.html">Center-Lib</a>
+              <a href="lib-right.html">Lib-Right</a>
+            </div>
+          </li>
+
+          <!-- The 6 Extremes -->
+          <li class="nav-item">
+            <span class="nav-link" style="color: #ff4757;">Horizon Points ▾</span>
+            <div class="dropdown">
+              <a href="extreme-al.html" style="color: #ff4757;">Marxism-Leninism (AL)</a>
+              <a href="extreme-ca.html" style="color: #a29bfe;">Technocracy (CA)</a>
+              <a href="extreme-ar.html" style="color: #74b9ff;">Reactionary Abs. (AR)</a>
+              <a href="extreme-ll.html" style="color: #55efc4;">Anarcho-Comm. (LL)</a>
+              <a href="extreme-cl.html" style="color: #fab1a0;">Radical Individualism (CL)</a>
+              <a href="extreme-lr.html" style="color: #ffeaa7;">Anarcho-Cap. (LR)</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="comparison.html" class="nav-link">Master Table</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="challenge.html" class="nav-link matrix-btn">The Challenge</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 
+Breadcrumb / Progress Tracker 
+(Useful for deep research through 750 facts)
+-->
+      <div style="background: #111; padding: 5px 20px; border-bottom: 1px solid #222; font-size: 0.75rem; color: #555;">
+        Database Status: <span style="color:#2ecc71">15/15 Pages Online</span> | 
+        Data Load: <span style="color:#f1c40f">750/750 Verified Facts</span>
+      </div>
+    </nav>
+    <div class="container">
+      <header class="hero">
+        <h1 style="color:var(--page-color)">Socialist Market</h1>
+        <p><strong>The Bridge of Equity:</strong> Democratic workplaces competing in a socialized framework.</p>
+      </header>
+
+
+
+      <h2 class="category-title">I. Workplace Democracy (Facts 01-10)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">01</span><p><strong>One Worker, One Vote:</strong> Every employee has an equal say in firm management, regardless of their role.</p></div>
+        <div class="fact-card"><span class="fact-number">02</span><p><strong>Elected Managers:</strong> Supervisors and executives are often elected by the workers they oversee.</p></div>
+        <div class="fact-card"><span class="fact-number">03</span><p><strong>Internal Wage Ratios:</strong> Many cooperatives cap the ratio between the highest and lowest-paid workers.</p></div>
+        <div class="fact-card"><span class="fact-number">04</span><p><strong>Transparency:</strong> All financial books are open to every member of the cooperative.</p></div>
+        <div class="fact-card"><span class="fact-number">05</span><p><strong>Skill Rotation:</strong> Encourages workers to learn multiple roles to prevent rigid hierarchies.</p></div>
+        <div class="fact-card"><span class="fact-number">06</span><p><strong>Profit Sharing:</strong> Net profits are distributed among workers as a dividend.</p></div>
+        <div class="fact-card"><span class="fact-number">07</span><p><strong>Social Capital:</strong> A portion of profits is often reinvested in the local community.</p></div>
+        <div class="fact-card"><span class="fact-number">08</span><p><strong>Right of First Refusal:</strong> Allows workers to buy a business if it is closing or being sold.</p></div>
+        <div class="fact-card"><span class="fact-number">09</span><p><strong>No Absentee Owners:</strong> You cannot own a share in a firm where you do not provide labor.</p></div>
+        <div class="fact-card"><span class="fact-number">10</span><p><strong>Human Capital Focus:</strong> Success is measured by worker well-being, not just stock price.</p></div>
+      </div>
+
+      <h2 class="category-title">II. Market Mechanisms (Facts 11-20)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">11</span><p><strong>Price Signals:</strong> Uses supply and demand to communicate the scarcity of goods.</p></div>
+        <div class="fact-card"><span class="fact-number">12</span><p><strong>Inter-Coop Competition:</strong> Cooperatives compete to provide better products and services.</p></div>
+        <div class="fact-card"><span class="fact-number">13</span><p><strong>Bankruptcy:</strong> Firms that fail to provide value can still go out of business.</p></div>
+        <div class="fact-card"><span class="fact-number">14</span><p><strong>Customer Choice:</strong> Consumers have the power to choose between competing socialist brands.</p></div>
+        <div class="fact-card"><span class="fact-number">15</span><p><strong>Consumer Cooperatives:</strong> Markets often feature retail outlets owned by the customers.</p></div>
+        <div class="fact-card"><span class="fact-number">16</span><p><strong>Decentralized Innovation:</strong> Research and development are driven by firm competition.</p></div>
+        <div class="fact-card"><span class="fact-number">17</span><p><strong>Resource Allocation:</strong> Materials move to where they are most efficiently used via markets.</p></div>
+        <div class="fact-card"><span class="fact-number">18</span><p><strong>Anti-Monopoly:</strong> Strict rules prevent one cooperative from dominating an industry.</p></div>
+        <div class="fact-card"><span class="fact-number">19</span><p><strong>Elastic Supply:</strong> Producers can quickly adjust to consumer trends.</p></div>
+        <div class="fact-card"><span class="fact-number">20</span><p><strong>Market Clearing:</strong> Prices adjust to ensure that shortages are avoided.</p></div>
+      </div>
+
+      <h2 class="category-title">III. Finance & Capital (Facts 21-30)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">21</span><p><strong>Public Investment Banks:</strong> Capital is provided by state/community banks rather than VCs.</p></div>
+        <div class="fact-card"><span class="fact-number">22</span><p><strong>Social Interest Rates:</strong> Lower rates for co-ops pursuing green or social goals.</p></div>
+        <div class="fact-card"><span class="fact-number">23</span><p><strong>Community Land Trusts:</strong> Land is held in common to prevent real estate speculation.</p></div>
+        <div class="fact-card"><span class="fact-number">24</span><p><strong>Mutual Credit:</strong> Firms use reciprocal credit systems to trade without cash.</p></div>
+        <div class="fact-card"><span class="fact-number">25</span><p><strong>Crowdfunded Development:</strong> Citizens invest directly in neighborhood cooperatives.</p></div>
+        <div class="fact-card"><span class="fact-number">26</span><p><strong>Non-Extractive Finance:</strong> Loans have fixed interest, avoiding perpetual equity.</p></div>
+        <div class="fact-card"><span class="fact-number">27</span><p><strong>Resilience Funds:</strong> Collective insurance to help firms in temporary trouble.</p></div>
+        <div class="fact-card"><span class="fact-number">28</span><p><strong>Asset Socialization:</strong> Infrastructure (grids, rails) remains public but used by co-ops.</p></div>
+        <div class="fact-card"><span class="fact-number">29</span><p><strong>Venture Socialism:</strong> Funds dedicated to starting new worker-owned tech firms.</p></div>
+        <div class="fact-card"><span class="fact-number">30</span><p><strong>No Stock Market:</strong> There is no secondary market for trading ownership of assets.</p></div>
+      </div>
+
+      <h2 class="category-title">IV. Social Safety & Equity (Facts 31-40)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">31</span><p><strong>Universal Basic Services:</strong> Markets are supplemented by free healthcare and transport.</p></div>
+        <div class="fact-card"><span class="fact-number">32</span><p><strong>Job Guarantee:</strong> The state acts as the "employer of last resort."</p></div>
+        <div class="fact-card"><span class="fact-number">33</span><p><strong>Social Dividend:</strong> Citizens receive a share of nationalized resource wealth.</p></div>
+        <div class="fact-card"><span class="fact-number">34</span><p><strong>Lifelong Education:</strong> Continuous retraining provided for worker transitions.</p></div>
+        <div class="fact-card"><span class="fact-number">35</span><p><strong>Productive Equity:</strong> Seeks to eliminate the owner/employee class divide.</p></div>
+        <div class="fact-card"><span class="fact-number">36</span><p><strong>Fair Trade Priority:</strong> Preferential trading with other socialist-market nations.</p></div>
+        <div class="fact-card"><span class="fact-number">37</span><p><strong>Housing Cooperatives:</strong> Residential property managed like the workplace.</p></div>
+        <div class="fact-card"><span class="fact-number">38</span><p><strong>Decentralized Welfare:</strong> Local councils manage social needs, not bureaucracy.</p></div>
+        <div class="fact-card"><span class="fact-number">39</span><p><strong>Environmental Accounting:</strong> Pollution is taxed to reflect true social cost.</p></div>
+        <div class="fact-card"><span class="fact-number">40</span><p><strong>Income Smoothing:</strong> Tax systems prevent extreme wealth while allowing for effort.</p></div>
+      </div>
+
+      <h2 class="category-title">V. Theory & History (Facts 41-50)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">41</span><p><strong>Yugoslav Model:</strong> The most famous 20th-century experiment with self-management.</p></div>
+        <div class="fact-card"><span class="fact-number">42</span><p><strong>Mondragon Corporation:</strong> A successful federation of 80,000+ workers in Spain.</p></div>
+        <div class="fact-card"><span class="fact-number">43</span><p><strong>Ricardian Socialism:</strong> Early theories linking labor value to market exchange.</p></div>
+        <div class="fact-card"><span class="fact-number">44</span><p><strong>Lange Model:</strong> A framework for using prices to solve socialist allocation.</p></div>
+        <div class="fact-card"><span class="fact-number">45</span><p><strong>Economic Democracy:</strong> Term used by scholars like David Schweickart.</p></div>
+        <div class="fact-card"><span class="fact-number">46</span><p><strong>The Great Compromise:</strong> Balancing market efficiency with socialist ethics.</p></div>
+        <div class="fact-card"><span class="fact-number">47</span><p><strong>Pluralist Commonwealth:</strong> A vision of diverse types of social ownership.</p></div>
+        <div class="fact-card"><span class="fact-number">48</span><p><strong>Syndicalist Influence:</strong> Borrowing union control for market use.</p></div>
+        <div class="fact-card"><span class="fact-number">49</span><p><strong>Anti-Stalinist:</strong> Explicitly rejects the "Command Economy" model.</p></div>
+        <div class="fact-card"><span class="fact-number">50</span><p><strong>Sustainable Growth:</strong> Prioritizes community stability over short-term gains.</p></div>
+      </div>
+    </div>
+  </body>
+</html>

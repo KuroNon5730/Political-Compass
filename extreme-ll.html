@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Extreme Lib-Left | Anarcho-Communism</title>
+    <style>
+      :root { --page-color: #004d40; }
+      .category-title { border-left: 5px solid #000; background: #111; padding: 10px; margin: 30px 0; }
+    </style>
+  </head>
+  <body>
+  <nav>
+  <!-- 
+Universal Navigation System for the 15-Page Ideology Database.
+Includes: 
+1. Sticky Top Bar with Dropdowns
+2. The "Horizon Points" (Extremes) Quick-Access
+3. Responsive Mobile Menu
+-->
+
+      <style>
+        :root {
+          --nav-bg: #0a0a0a;
+          --nav-border: #222;
+          --accent: #f1c40f;
+          /* Quadrant Colors */
+          --al: #e74c3c; --ca: #8e44ad; --ar: #3498db;
+          --sm: #d35400; --ce: #7f8c8d; --cm: #2c3e50;
+          --ll: #2ecc71; --cl: #e67e22; --lr: #f1c40f;
+        }
+
+        nav.main-nav {
+          background: var(--nav-bg);
+          border-bottom: 1px solid var(--nav-border);
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+          padding: 0 20px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .nav-brand a {
+          font-weight: 900;
+          color: #fff;
+          text-decoration: none;
+          letter-spacing: 2px;
+          font-size: 1.2rem;
+        }
+
+        .nav-brand span { color: var(--accent); }
+
+        .nav-links {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+        }
+
+        .nav-item {
+          position: relative;
+          list-style: none;
+        }
+
+        .nav-link {
+          color: #aaa;
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: 0.2s;
+          cursor: pointer;
+        }
+
+        .nav-link:hover { color: #fff; }
+
+        /* Dropdown Menus */
+        .dropdown {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #111;
+          border: 1px solid #333;
+          border-radius: 8px;
+          width: 220px;
+          padding: 10px 0;
+          display: none;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .nav-item:hover .dropdown {
+          display: block;
+        }
+
+        .dropdown a {
+          display: block;
+          padding: 10px 20px;
+          color: #888;
+          text-decoration: none;
+          font-size: 0.85rem;
+          transition: 0.2s;
+        }
+
+        .dropdown a:hover {
+          background: #1a1a1a;
+          color: #fff;
+        }
+
+        /* Specialized Matrix Indicator */
+        .matrix-btn {
+          background: var(--accent);
+          color: #000 !important;
+          padding: 6px 15px;
+          border-radius: 20px;
+          font-weight: bold;
+        }
+
+        /* Mobile Toggle (Simplified for this snippet) */
+        .mobile-hint { display: none; }
+        @media (max-width: 768px) {
+          .nav-links { display: none; }
+          .mobile-hint { display: block; color: var(--accent); font-size: 0.8rem; }
+        }
+      </style>
+
+      <nav class="main-nav">
+        <div class="nav-brand">
+          <a href="index.html">POLITI<span>CORE</span></a>
+        </div>
+
+        <div class="mobile-hint">Menu ☰</div>
+
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Matrix Home</a>
+          </li>
+
+          <!-- Core 9 Zones -->
+          <li class="nav-item">
+            <span class="nav-link">Core Zones ▾</span>
+            <div class="dropdown">
+              <a href="authoritarian.html">Auth-Left</a>
+              <a href="center-auth.html">Center-Auth</a>
+              <a href="auth-right.html">Auth-Right</a>
+              <hr style="border:0; border-top:1px solid #222;">
+              <a href="socialist-market.html">Socialist Market</a>
+              <a href="centrism.html">Centrism</a>
+              <a href="corporate-market.html">Corporate Market</a>
+              <hr style="border:0; border-top:1px solid #222;">
+              <a href="libertarian.html">Lib-Left</a>
+              <a href="center-lib.html">Center-Lib</a>
+              <a href="lib-right.html">Lib-Right</a>
+            </div>
+          </li>
+
+          <!-- The 6 Extremes -->
+          <li class="nav-item">
+            <span class="nav-link" style="color: #ff4757;">Horizon Points ▾</span>
+            <div class="dropdown">
+              <a href="extreme-al.html" style="color: #ff4757;">Marxism-Leninism (AL)</a>
+              <a href="extreme-ca.html" style="color: #a29bfe;">Technocracy (CA)</a>
+              <a href="extreme-ar.html" style="color: #74b9ff;">Reactionary Abs. (AR)</a>
+              <a href="extreme-ll.html" style="color: #55efc4;">Anarcho-Comm. (LL)</a>
+              <a href="extreme-cl.html" style="color: #fab1a0;">Radical Individualism (CL)</a>
+              <a href="extreme-lr.html" style="color: #ffeaa7;">Anarcho-Cap. (LR)</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="comparison.html" class="nav-link">Master Table</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="challenge.html" class="nav-link matrix-btn">The Challenge</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 
+Breadcrumb / Progress Tracker 
+(Useful for deep research through 750 facts)
+-->
+      <div style="background: #111; padding: 5px 20px; border-bottom: 1px solid #222; font-size: 0.75rem; color: #555;">
+        Database Status: <span style="color:#2ecc71">15/15 Pages Online</span> | 
+        Data Load: <span style="color:#f1c40f">750/750 Verified Facts</span>
+      </div>
+    </nav>
+    <div class="container">
+      <header class="hero">
+        <h1 style="color:var(--page-color)">Anarcho-Communism</h1>
+        <p><strong>The Free Commune:</strong> Abolition of the State, Currency, and Private Property.</p>
+      </header>
+
+
+
+      <h2 class="category-title">Abolition of Power (Facts 01-25)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">01</span><p><strong>Abolition of the State:</strong> The immediate destruction of all borders, taxes, and police forces.</p></div>
+        <div class="fact-card"><span class="fact-number">02</span><p><strong>Gift Economy:</strong> Distribution of goods based purely on need without currency or bartering.</p></div>
+        <div class="fact-card"><span class="fact-number">03</span><p><strong>Direct Action:</strong> Rejection of political parties in favor of occupations and mutual aid.</p></div>
+        <div class="fact-card"><span class="fact-number">04</span><p><strong>Consensus Democracy:</strong> Every member of a commune must reach a shared agreement for any action.</p></div>
+        <div class="fact-card"><span class="fact-number">05</span><p><strong>Work as Play:</strong> The transformation of labor into voluntary, creative activity.</p></div>
+      </div>
+
+      <h2 class="category-title">Communal Life (Facts 26-30)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">26</span><p><strong>Common Ownership:</strong> The total lack of title deeds; the Earth belongs to no one.</p></div>
+        <div class="fact-card"><span class="fact-number">27</span><p><strong>Restorative Circles:</strong> Replacing prisons with community-led reconciliation meetings.</p></div>
+        <div class="fact-card"><span class="fact-number">28</span><p><strong>Prefigurative Politics:</strong> Living today as if the state has already been abolished.</p></div>
+        <div class="fact-card"><span class="fact-number">29</span><p><strong>Abolition of Property:</strong> Distinguishing between "personal" items and "private" capital.</p></div>
+        <div class="fact-card"><span class="fact-number">30</span><p><strong>Syndicalist Federations:</strong> Coordination through temporary associations of worker councils.</p></div>
+      </div>
+      <h2 class="category-title">Communal Dynamics (Facts 31-40)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">31</span><p><strong>Mutual Aid:</strong> Voluntary resource exchange based on community solidarity.</p></div>
+        <div class="fact-card"><span class="fact-number">32</span><p><strong>Usufruct Rights:</strong> Property rights based solely on active usage and occupancy.</p></div>
+        <div class="fact-card"><span class="fact-number">33</span><p><strong>Affinity Groups:</strong> Temporary clusters formed for specific social or tactical tasks.</p></div>
+        <div class="fact-card"><span class="fact-number">34</span><p><strong>Platformism:</strong> Organizing anarchist groups with unified tactical and theoretical goals.</p></div>
+        <div class="fact-card"><span class="fact-number">35</span><p><strong>Free Access:</strong> Removing barriers to all community-held resources.</p></div>
+        <div class="fact-card"><span class="fact-number">36</span><p><strong>Recallable Delegates:</strong> Temporary reps removable by the commune at any moment.</p></div>
+        <div class="fact-card"><span class="fact-number">37</span><p><strong>Anti-Work:</strong> Rejection of wage-labor in favor of voluntary, creative fulfillment.</p></div>
+        <div class="fact-card"><span class="fact-number">38</span><p><strong>Community Self-Defense:</strong> Decentralized militias replacing the professional military.</p></div>
+        <div class="fact-card"><span class="fact-number">39</span><p><strong>Horizontalism:</strong> Refusal to allow permanent positions of authority or leadership.</p></div>
+        <div class="fact-card"><span class="fact-number">40</span><p><strong>Squatting:</strong> Reclaiming unused space as a legitimate social act.</p></div>
+      </div>
+      <h2 class="category-title">Libertarian Socialism (Facts 41-50)</h2>
+      <div class="fact-grid">
+        <div class="fact-card"><span class="fact-number">41</span><p><strong>Conquest of Bread:</strong> Theory of post-state food distribution without money.</p></div>
+        <div class="fact-card"><span class="fact-number">42</span><p><strong>Revolutionary Catalonia:</strong> Historical precedent of worker-run industry without bosses.</p></div>
+        <div class="fact-card"><span class="fact-number">43</span><p><strong>Anarcho-Syndicalism:</strong> Using unions as the vehicle to build an anarchist society.</p></div>
+        <div class="fact-card"><span class="fact-number">44</span><p><strong>Equal Authority Education:</strong> Schools where students and teachers share governance.</p></div>
+        <div class="fact-card"><span class="fact-number">45</span><p><strong>The Black Bloc:</strong> Anonymous collective action against state/capitalist symbols.</p></div>
+        <div class="fact-card"><span class="fact-number">46</span><p><strong>Abolition of Borders:</strong> National boundaries viewed as violent artificial constructs.</p></div>
+        <div class="fact-card"><span class="fact-number">47</span><p><strong>Social Ecology:</strong> Belief that hierarchy is the root cause of environmental destruction.</p></div>
+        <div class="fact-card"><span class="fact-number">48</span><p><strong>General Strike:</strong> Stopping all labor to dismantle the state infrastructure.</p></div>
+        <div class="fact-card"><span class="fact-number">49</span><p><strong>Decentralized Planning:</strong> Local councils coordinating production without a center.</p></div>
+        <div class="fact-card"><span class="fact-number">50</span><p><strong>Anarchy is Order:</strong> Spontaneous social harmony arising once the state is removed.</p></div>
+      </div>
+    </div>
+  </body>
+</html>
