@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Political Database | 9-Zone Interactive Map</title>
+    <!--
+The Updated 15-Zone Navigation Grid.
+This represents the 9 core zones in a 3x3 grid,
+flanked by the extreme "Horizon Points" outside the grid.
+-->
+
+    <style>
+      .matrix-wrapper {
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #050505;
+      }
+
+      /* Horizon Points Container */
+      .horizon-bar {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 800px;
+      }
+
+      .extreme-btn {
+        flex: 1;
+        padding: 10px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 0.7rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 1px solid #222;
+        border-radius: 4px;
+        transition: 0.3s;
+      }
+
+      .extreme-btn:hover { background: #111; border-color: #555; }
+
+      /* The 3x3 Core */
+      .grid-3x3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+        max-width: 800px;
+        aspect-ratio: 1/1;
+      }
+
+      .grid-3x3 a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        padding: 20px;
+        border-radius: 6px;
+        transition: transform 0.2s, filter 0.2s;
+        border: 1px solid rgba(255,255,255,0.05);
+      }
+
+      .grid-3x3 a:hover {
+        transform: scale(1.02);
+        filter: brightness(1.3);
+        z-index: 10;
+        box-shadow: 0 0 20px rgba(255,255,255,0.1);
+      }
+
+      /* Horizon Bar Bottom */
+      .horizon-bar.bottom { margin-top: 20px; margin-bottom: 0; }
+    </style>
+
+    <div class="matrix-wrapper">
+      <h2 style="color:#444; margin-bottom:30px; letter-spacing:4px; font-weight:300;">POLITICORE</h2>
+
+      <!-- Top Horizon (Extreme Auth) -->
+      <div class="horizon-bar">
+        <a href="extreme-al.html" class="extreme-btn" style="border-top: 3px solid #ff4757;">Marxism-Leninism</a>
+        <a href="extreme-ca.html" class="extreme-btn" style="border-top: 3px solid #a29bfe;">Technocracy</a>
+        <a href="extreme-ar.html" class="extreme-btn" style="border-top: 3px solid #74b9ff;">Reactionary Absolutism</a>
+      </div>
+
+      <!-- Core Grid -->
+      <div class="grid-3x3">
+        <a href="authoritarian.html" style="background:#e74c3c;">Authoritarian-Left</a>
+        <a href="center-auth.html" style="background:#8e44ad;">Center-Authoritarian</a>
+        <a href="auth-right.html" style="background:#3498db;">Authoritarian-Right</a>
+
+        <a href="socialist-market.html" style="background:#d35400;">Socialist Market</a>
+        <a href="centrism.html" style="background:#7f8c8d;">Centrism</a>
+        <a href="corporate-market.html" style="background:#2c3e50;">Corporate Market</a>
+
+        <a href="libertarian.html" style="background:#2ecc71;">Libertarian-Left</a>
+        <a href="center-lib.html" style="background:#e67e22;">Center-Libertarian</a>
+        <a href="lib-right.html" style="background:#f1c40f; color:#000;">Libertarian-Right</a>
+      </div>
+
+      <!-- Bottom Horizon (Extreme Lib) -->
+      <div class="horizon-bar bottom">
+        <a href="extreme-ll.html" class="extreme-btn" style="border-bottom: 3px solid #55efc4;">Anarcho-Communism</a>
+        <a href="extreme-cl.html" class="extreme-btn" style="border-bottom: 3px solid #fab1a0;">Radical Individualism</a>
+        <a href="extreme-lr.html" class="extreme-btn" style="border-bottom: 3px solid #ffeaa7;">Anarcho-Capitalism</a>
+      </div>
+    </div>
+</html>
