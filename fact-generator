@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact Generator | PolitiCore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Fira+Code:wght@400;500&display=swap');
+        :root { --bg-dark: #070708; --accent: #f1c40f; }
+        body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at 50% 50%, #1a1a1e 0%, #070708 100%); color: #e4e4e7; }
+        .generate-btn { background: var(--accent); color: #000; box-shadow: 0 0 20px rgba(241, 196, 15, 0.2); transition: 0.2s; }
+        .generate-btn:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(241, 196, 15, 0.4); }
+        .nav-btn { border: 1px solid #27272a; background: rgba(255,255,255,0.03); transition: 0.2s; }
+        .nav-btn:hover { background: rgba(255,255,255,0.1); border-color: #555; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="border-b border-zinc-800 bg-black/50 backdrop-blur-md p-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="font-black tracking-tighter text-xl uppercase">POLITI<span class="text-yellow-500">CORE</span></span>
+            <nav class="flex gap-3">
+                <a href="glossary.html" class="nav-btn px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest text-zinc-400">Glossary</a>
+                <a href="bibliography.html" class="nav-btn px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest text-zinc-400">Bibliography</a>
+                <a href="fact-generator.html" class="nav-btn px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest text-yellow-500 bg-yellow-500/5 border-yellow-500/30">Generator</a>
+            </nav>
+        </div>
+    </header>
+    <main class="flex-grow flex items-center justify-center p-6">
+        <div class="max-w-2xl w-full">
+            <div class="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-12 text-center">
+                <p id="fact-text" class="text-2xl font-medium text-zinc-200 mb-10 transition-all duration-300">
+                    Initialize data stream to extract a random verified fact.
+                </p>
+                <button onclick="pullFact()" class="generate-btn px-10 py-4 rounded-full font-black uppercase tracking-widest text-sm">
+                    Request New Data
+                </button>
+            </div>
+        </div>
+    </main>
+    <script>
+        const facts = ["Technocracy proposed a 4-hour workday.", "The NAP is the core axiom of Anarcho-Capitalism.", "Agorists use counter-economics to bypass states."];
+        function pullFact() {
+            const text = document.getElementById('fact-text');
+            text.style.opacity = 0;
+            setTimeout(() => {
+                text.innerText = facts[Math.floor(Math.random() * facts.length)];
+                text.style.opacity = 1;
+            }, 300);
+        }
+    </script>
+</body>
+</html>
